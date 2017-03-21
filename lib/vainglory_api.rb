@@ -1,7 +1,7 @@
-require 'openssl'
-require 'net/http'
 require 'json'
 require 'ostruct'
+require 'openssl'
+require 'net/http'
 
 class VaingloryAPI
   BASE_URL = "https://api.dc01.gamelockerapp.com"
@@ -32,6 +32,10 @@ class VaingloryAPI
       get_request(endpoint_uri("shards/na/players/#{player_id}"))
     end
 
+    def telemetry(url)
+      get_request(URI(url), true, false)
+    end
+
     def teams(filter_params = {})
       raise(NotImplementedError, "Coming soon!")
     end
@@ -42,10 +46,6 @@ class VaingloryAPI
 
     def link(link_id)
       raise(NotImplementedError, "Coming soon!")
-    end
-
-    def telemetry(url)
-      get_request(URI(url), true, false)
     end
 
     private
@@ -89,10 +89,7 @@ class VaingloryAPI
     end
 
     def response(response_data)
-      OpenStruct.new({
-        success?: response_data.code.to_i < 300,
-        data: JSON.parse(response_data.body)
-      })
+      JSON.parse(response_data.body, object_class: OpenStruct)
     end
   end
 end
