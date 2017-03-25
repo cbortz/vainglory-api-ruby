@@ -89,7 +89,14 @@ class VaingloryAPI
     end
 
     def response(response_data)
-      JSON.parse(response_data.body, object_class: OpenStruct)
+      OpenStruct.new({
+        success?:       response_data.code.to_i < 200,
+        rate_limit:     response_data['X-RateLimit-Limit'].to_i,
+        rate_remaining: response_data['X-RateLimit-Remaining'].to_i,
+        rate_reset:     response_data['X-RateLimit-Reset'].to_i,
+        data:           JSON.parse(response_data.body, object_class: OpenStruct),
+        raw:            response_data
+      })
     end
   end
 end
