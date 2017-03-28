@@ -3,7 +3,9 @@ machine:
     RUBY_VERSIONS: 2.0.0,2.1.10,2.2.5,2.3.1,2.4.1
 
 dependencies:
-  override:
+  cache_directories:
+    - "/opt/circleci/.rvm/gems"
+  pre:
     - rvm get head
     - rvm install $RUBY_VERSIONS
     - rvm $RUBY_VERSIONS --verbose do gem install bundler
@@ -12,4 +14,4 @@ dependencies:
 test:
   override:
     - rvm $RUBY_VERSIONS --verbose do bundle exec rspec spec
-    - bundle exec codeclimate-test-reporter
+    - rvm 2.4.1 --verbose do bundle exec codeclimate-test-reporter
