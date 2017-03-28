@@ -8,3 +8,8 @@ rvm:
 sudo: false
 gemfile: Gemfile
 script: bundle exec rspec spec
+addons:
+  code_climate:
+    repo_token: d20c1b4862616550a65962ceecf0299c70a844cbce54a230b5234804ac2725dc
+after_success:
+  - bundle exec codeclimate-test-reporter
