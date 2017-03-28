@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vainglory-api (0.0.0)
+    vainglory-api (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -46,12 +46,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  codeclimate-test-reporter
-  rspec
-  simplecov
+  codeclimate-test-reporter (~> 1.0)
+  rspec (~> 3.5)
+  simplecov (~> 0.14)
   vainglory-api!
-  vcr
-  webmock
+  vcr (~> 3.0)
+  webmock (~> 2.3)
 
 BUNDLED WITH
    1.14.6
