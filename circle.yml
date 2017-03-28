@@ -3,8 +3,6 @@ machine:
     RUBY_VERSIONS: 2.0.0,2.1.10,2.2.5,2.3.1,2.4.1
 
 dependencies:
-  cache_directories:
-    - "/opt/circleci/.rvm/gems"
   override:
     - rvm get head
     - rvm install $RUBY_VERSIONS
