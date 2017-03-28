@@ -5,7 +5,7 @@ machine:
 dependencies:
   cache_directories:
     - "/opt/circleci/.rvm/gems"
-  pre:
+  override:
     - rvm get head
     - rvm install $RUBY_VERSIONS
     - rvm $RUBY_VERSIONS --verbose do gem install bundler
