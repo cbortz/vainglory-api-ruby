@@ -8,6 +8,8 @@ Gem::Specification.new do |s|
   s.files       = ["lib/vainglory_api.rb"]
   s.license     = 'MIT'
 
+  s.required_ruby_version = '>= 2.0'
+
   s.add_development_dependency "webmock", '~> 2.3'
   s.add_development_dependency "vcr", '~> 3.0'
   s.add_development_dependency "rspec", '~> 3.5'
