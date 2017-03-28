@@ -7,4 +7,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Chet Bortz"]
   s.files       = ["lib/vainglory_api.rb"]
   s.license     = 'MIT'
+
+  s.add_development_dependency "webmock"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "rspec"
 end

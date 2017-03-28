@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.dc01.gamelockerapp.com
+      Authorization:
+      - Bearer invalid-api-key
+      X-Title-Id:
+      - semc-vainglory
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 28 Mar 2017 06:21:57 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '62'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Request-Id:
+      - 09a5efca-0c17-41b3-b096-2cb360a5cdb6
+      X-Title-Id:
+      - semc-vainglory
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {"errors":[{"title":"Unauthorized"}]}
+    http_version: 
+  recorded_at: Tue, 28 Mar 2017 06:21:57 GMT
+recorded_with: VCR 3.0.3

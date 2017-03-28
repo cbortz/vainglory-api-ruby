@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.dc01.gamelockerapp.com/shards/na/matches/37f94e56-1360-11e7-a250-062445d3d668
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.dc01.gamelockerapp.com
+      Authorization:
+      - Bearer valid_api_key
+      X-Title-Id:
+      - semc-vainglory
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Mar 2017 06:22:00 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Limit:
+      - '10'
+      X-Ratelimit-Remaining:
+      - '0'
+      X-Ratelimit-Reset:
+      - '57218011000'
+      X-Request-Id:
+      - ee72d535-5258-4c12-a9f8-f439d0f41096
+      X-Title-Id:
+      - semc-vainglory
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {"data":{"type":"match","id":"37f94e56-1360-11e7-a250-062445d3d668","attributes":{"createdAt":"2017-03-28T02:42:53Z","duration":924,"gameMode":"casual","patchVersion":"","shardId":"na","stats":{"endGameReason":"victory","queue":"casual"},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[{"type":"asset","id":"935cc70c-1362-11e7-9a29-0242ac110009"}]},"rosters":{"data":[{"type":"roster","id":"93142df4-1362-11e7-9a29-0242ac110009"},{"type":"roster","id":"931426c4-1362-11e7-9a29-0242ac110009"}]},"rounds":{"data":[]}}},"included":[{"type":"participant","id":"93142964-1362-11e7-9a29-0242ac110009","attributes":{"actor":"*Krul*","stats":{"assists":0,"crystalMineCaptures":0,"deaths":9,"farm":11.425,"firstAfkTime":-1,"gold":135,"goldMineCaptures":0,"itemGrants":{"*1000_Item_HalcyonPotion*":13,"*1002_Item_WeaponBlade*":1,"*1004_Item_SwiftShooter*":1,"*1010_Item_BlazingSalvo*":1,"*1030_Item_SprintBoots*":1,"*1046_Item_Crucible*":1,"*1054_Item_ScoutTrap*":23},"itemSells":{"*1002_Item_WeaponBlade*":1},"itemUses":{"*1000_Item_HalcyonPotion*":9,"*1030_Item_SprintBoots*":4,"*1046_Item_Crucible*":1,"*1054_Item_ScoutTrap*":23},"items":["Blazing Salvo","Halcyon Potion","Sprint Boots","Halcyon Potion","Crucible"],"jungleKills":5,"karmaLevel":1,"kills":0,"krakenCaptures":0,"level":8,"minionKills":11,"nonJungleMinionKills":6,"skillTier":-1,"skinKey":"Krul_DefaultSkin","turretCaptures":0,"wentAfk":false,"winner":false}},"relationships":{"player":{"data":{"type":"player","id":"fef663a8-12a3-11e7-971a-02866102f5a6"}}}},{"type":"participant","id":"93142ba5-1362-11e7-9a29-0242ac110009","attributes":{"actor":"*Kestrel*","stats":{"assists":0,"crystalMineCaptures":0,"deaths":5,"farm":63,"firstAfkTime":-1,"gold":80,"goldMineCaptures":0,"itemGrants":{"*1002_Item_WeaponBlade*":1,"*1004_Item_SwiftShooter*":1,"*1005_Item_SixSins*":1,"*1010_Item_BlazingSalvo*":1,"*1012_Item_Sorrowblade*":1,"*1016_Item_Dragonheart*":1,"*1030_Item_SprintBoots*":1,"*1032_Item_TravelBoots*":1,"*1042_Item_Shiversteel*":1,"*1065_Item_HeavySteel*":1,"*1092_Item_PoisonedShiv*":1},"itemSells":{},"itemUses":{"*1030_Item_SprintBoots*":1,"*1032_Item_TravelBoots*":4,"*1042_Item_Shiversteel*":3},"items":["Sorrowblade","Poisoned Shiv","Travel Boots","Shiversteel"],"jungleKills":0,"karmaLevel":1,"kills":2,"krakenCaptures":0,"level":5,"minionKills":49,"nonJungleMinionKills":49,"skillTier":-1,"skinKey":"Kestrel_DefaultSkin","turretCaptures":0,"wentAfk":false,"winner":false}},"relationships":{"player":{"data":{"type":"player","id":"f90a22e4-1114-11e7-9680-02b3611af5e6"}}}},{"type":"player","id":"1662d86e-0c5f-11e7-bb5d-02f3b4306918","attributes":{"name":"wheatcl","shardId":"","stats":{"level":10,"lifetimeGold":11369.5,"lossStreak":1,"played":9,"played_ranked":0,"winStreak":0,"wins":12,"xp":5847},"titleId":""},"relationships":{"assets":{"data":[]}}},{"type":"participant","id":"93141a20-1362-11e7-9a29-0242ac110009","attributes":{"actor":"*Catherine*","stats":{"assists":7,"crystalMineCaptures":0,"deaths":0,"farm":19.925,"firstAfkTime":-1,"gold":308,"goldMineCaptures":1,"itemGrants":{"*1000_Item_HalcyonPotion*":11,"*1015_Item_Oakheart*":2,"*1016_Item_Dragonheart*":1,"*1030_Item_SprintBoots*":1,"*1043_Item_ReflexBlock*":1,"*1045_Item_FountainOfRenewal*":1,"*1046_Item_Crucible*":1,"*1057_Item_AtlasPauldron*":1,"*1061_Item_LightShield*":1,"*1095_Item_NullwaveGauntlet*":1},"itemSells":{},"itemUses":{"*1000_Item_HalcyonPotion*":10,"*1030_Item_SprintBoots*":3,"*1043_Item_ReflexBlock*":3,"*1045_Item_FountainOfRenewal*":9,"*1046_Item_Crucible*":2,"*1057_Item_AtlasPauldron*":2,"*1095_Item_NullwaveGauntlet*":6},"items":["Fountain of Renewal","Nullwave Gauntlet","Crucible","Sprint Boots","Atlas Pauldron","Halcyon Potion"],"jungleKills":3,"karmaLevel":1,"kills":5,"krakenCaptures":0,"level":10,"minionKills":14,"nonJungleMinionKills":11,"skillTier":-1,"skinKey":"Catherine_DefaultSkin","turretCaptures":3,"wentAfk":false,"winner":true}},"relationships":{"player":{"data":{"type":"player","id":"1662d86e-0c5f-11e7-bb5d-02f3b4306918"}}}},{"type":"participant","id":"93141f0e-1362-11e7-9a29-0242ac110009","attributes":{"actor":"*Taka*","stats":{"assists":3,"crystalMineCaptures":1,"deaths":0,"farm":63.35,"firstAfkTime":-1,"gold":1285,"goldMineCaptures":2,"itemGrants":{"*1003_Item_CrystalBit*":1,"*1009_Item_EclipsePrism*":1,"*1015_Item_Oakheart*":1,"*1027_Item_VoidBattery*":1,"*1028_Item_Chronograph*":1,"*1030_Item_SprintBoots*":1,"*1032_Item_TravelBoots*":1,"*1043_Item_ReflexBlock*":1,"*1050_Item_Aftershock*":1,"*1055_Item_BrokenMyth*":1,"*1070_Item_PiercingShard*":1,"*1072_Item_HeavyPrism*":1,"*1074_Item_StormguardBanner*":1,"*1090_Item_Stormcrown*":1},"itemSells":{},"itemUses":{"*1030_Item_SprintBoots*":3,"*1032_Item_TravelBoots*":2,"*1043_Item_ReflexBlock*":2},"items":["Stormcrown","Travel Boots","Aftershock","Reflex Block","Broken Myth","Void Battery"],"jungleKills":34,"karmaLevel":1,"kills":11,"krakenCaptures":0,"level":10,"minionKills":51,"nonJungleMinionKills":17,"skillTier":-1,"skinKey":"Taka_DefaultSkin","turretCaptures":1,"wentAfk":false,"winner":true}},"relationships":{"player":{"data":{"type":"player","id":"7d7ec62e-f39c-11e6-9505-06a9175d25fa"}}}},{"type":"asset","id":"935cc70c-1362-11e7-9a29-0242ac110009","attributes":{"URL":"https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/28/02/59/935cc70c-1362-11e7-9a29-0242ac110009-telemetry.json","contentType":"application/json","createdAt":"2017-03-28T02:59:35Z","description":"","filename":"telemetry.json","name":"telemetry"}},{"type":"player","id":"7d7ec62e-f39c-11e6-9505-06a9175d25fa","attributes":{"name":"Jsavvage","shardId":"","stats":{"level":10,"lifetimeGold":12011.75,"lossStreak":1,"played":15,"played_ranked":0,"winStreak":0,"wins":16,"xp":5017},"titleId":""},"relationships":{"assets":{"data":[]}}},{"type":"roster","id":"93142df4-1362-11e7-9a29-0242ac110009","attributes":{"stats":{"acesEarned":0,"gold":21082,"heroKills":2,"krakenCaptures":0,"side":"left/blue","turretKills":0,"turretsRemaining":0}},"relationships":{"participants":{"data":[{"type":"participant","id":"931426db-1362-11e7-9a29-0242ac110009"},{"type":"participant","id":"93142964-1362-11e7-9a29-0242ac110009"},{"type":"participant","id":"93142ba5-1362-11e7-9a29-0242ac110009"}]},"team":{"data":null}}},{"type":"participant","id":"931426db-1362-11e7-9a29-0242ac110009","attributes":{"actor":"*Adagio*","stats":{"assists":0,"crystalMineCaptures":0,"deaths":10,"farm":21.5,"firstAfkTime":-1,"gold":132,"goldMineCaptures":1,"itemGrants":{"*1002_Item_WeaponBlade*":1,"*1005_Item_SixSins*":1,"*1054_Item_ScoutTrap*":29,"*1060_Item_BarbedNeedle*":1,"*1063_Item_Aegis*":1},"itemSells":{},"itemUses":{"*1054_Item_ScoutTrap*":19,"*1063_Item_Aegis*":1},"items":["Six Sins","Aegis","Scout Trap","Barbed Needle","Scout Trap"],"jungleKills":5,"karmaLevel":1,"kills":0,"krakenCaptures":0,"level":9,"minionKills":12,"nonJungleMinionKills":7,"skillTier":-1,"skinKey":"Adagio_DefaultSkin","turretCaptures":0,"wentAfk":false,"winner":false}},"relationships":{"player":{"data":{"type":"player","id":"4575c16a-a9d7-11e6-9912-06c5ee41a4a5"}}}},{"type":"player","id":"d3ebff7a-0f00-11e7-9696-02866102f5a6","attributes":{"name":"ShiningComet11","shardId":"","stats":{"level":6,"lifetimeGold":13240,"lossStreak":2,"played":13,"played_ranked":0,"winStreak":0,"wins":7,"xp":1876},"titleId":""},"relationships":{"assets":{"data":[]}}},{"type":"participant","id":"93142358-1362-11e7-9a29-0242ac110009","attributes":{"actor":"*Gwen*","stats":{"assists":7,"crystalMineCaptures":0,"deaths":2,"farm":99,"firstAfkTime":-1,"gold":80,"goldMineCaptures":1,"itemGrants":{"*1000_Item_HalcyonPotion*":2,"*1002_Item_WeaponBlade*":1,"*1004_Item_SwiftShooter*":1,"*1010_Item_BlazingSalvo*":1,"*1012_Item_Sorrowblade*":1,"*1017_Item_LightArmor*":1,"*1022_Item_CoatOfPlates*":1,"*1030_Item_SprintBoots*":1,"*1032_Item_TravelBoots*":1,"*1039_Item_Bonesaw*":1,"*1049_Item_TyrantsMonocle*":1,"*1065_Item_HeavySteel*":1,"*1068_Item_LuckyStrike*":1},"itemSells":{},"itemUses":{"*1000_Item_HalcyonPotion*":2,"*1030_Item_SprintBoots*":1},"items":["Sorrowblade","Coat Of Plates","Tyrants Monocle","Bonesaw","Travel Boots"],"jungleKills":0,"karmaLevel":1,"kills":8,"krakenCaptures":0,"level":6,"minionKills":79,"nonJungleMinionKills":79,"skillTier":-1,"skinKey":"Gwen_DefaultSkin","turretCaptures":5,"wentAfk":false,"winner":true}},"relationships":{"player":{"data":{"type":"player","id":"d3ebff7a-0f00-11e7-9696-02866102f5a6"}}}},{"type":"roster","id":"931426c4-1362-11e7-9a29-0242ac110009","attributes":{"stats":{"acesEarned":2,"gold":36620,"heroKills":24,"krakenCaptures":0,"side":"right/red","turretKills":5,"turretsRemaining":5}},"relationships":{"participants":{"data":[{"type":"participant","id":"93141a20-1362-11e7-9a29-0242ac110009"},{"type":"participant","id":"93141f0e-1362-11e7-9a29-0242ac110009"},{"type":"participant","id":"93142358-1362-11e7-9a29-0242ac110009"}]},"team":{"data":null}}},{"type":"player","id":"4575c16a-a9d7-11e6-9912-06c5ee41a4a5","attributes":{"name":"NightOwl9","shardId":"","stats":{"level":9,"lifetimeGold":6520,"lossStreak":1,"played":20,"played_ranked":0,"winStreak":0,"wins":20,"xp":4229},"titleId":""},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"fef663a8-12a3-11e7-971a-02866102f5a6","attributes":{"name":"KillerVJC","shardId":"","stats":{"level":8,"lifetimeGold":6262,"lossStreak":0,"played":17,"played_ranked":0,"winStreak":2,"wins":10,"xp":3272},"titleId":""},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f90a22e4-1114-11e7-9680-02b3611af5e6","attributes":{"name":"1chiban","shardId":"","stats":{"level":5,"lifetimeGold":8300,"lossStreak":0,"played":7,"played_ranked":0,"winStreak":4,"wins":7,"xp":1445},"titleId":""},"relationships":{"assets":{"data":[]}}}]}
+    http_version:
+  recorded_at: Tue, 28 Mar 2017 06:22:00 GMT
+- request:
+    method: get
+    uri: https://api.dc01.gamelockerapp.com/shards/na/matches/invalid-id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.dc01.gamelockerapp.com
+      Authorization:
+      - Bearer valid_api_key
+      X-Title-Id:
+      - semc-vainglory
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 28 Mar 2017 06:22:09 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '59'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Limit:
+      - '10'
+      X-Ratelimit-Remaining:
+      - '0'
+      X-Ratelimit-Reset:
+      - '54280901000'
+      X-Request-Id:
+      - ddf1fbcf-dadf-41e8-9946-032e016aa4a1
+      X-Title-Id:
+      - semc-vainglory
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {"errors":[{"title":"Not Found"}]}
+    http_version:
+  recorded_at: Tue, 28 Mar 2017 06:22:09 GMT
+recorded_with: VCR 3.0.3
