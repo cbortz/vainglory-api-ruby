@@ -11,4 +11,4 @@ dependencies:
 
 test:
   override:
-    - rvm $RUBY_VERSIONS --verbose do bundle exec rspec spec
+    - rvm $RUBY_VERSIONS --verbose do bundle exec rake
