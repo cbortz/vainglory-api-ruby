@@ -14,4 +14,3 @@ dependencies:
 test:
   override:
     - rvm $RUBY_VERSIONS --verbose do bundle exec rspec spec
-    - rvm 2.4.1 --verbose do bundle exec codeclimate-test-reporter
