@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'vainglory-api'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2017-03-28'
   s.summary     = "Vainglory API"
   s.description = "A Ruby libary wrapper for the Vainglory API"
