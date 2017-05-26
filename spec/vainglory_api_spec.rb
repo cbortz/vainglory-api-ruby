@@ -4,29 +4,31 @@ describe 'VaingloryAPI spec', vcr: true do
   let(:valid_api_key) { 'valid_api_key' }
   let(:client) { VaingloryAPI.new(valid_api_key) }
 
-  it 'returns an error with an invalid API key' do
-    VCR.use_cassette("api_key", record: :new_episodes) do
-      response = VaingloryAPI.new('invalid-api-key').players
-      expects_error_response(response, 401)
+  context 'metadata' do
+    it 'returns an error with an invalid API key' do
+      VCR.use_cassette('api_key', record: :new_episodes) do
+        response = VaingloryAPI.new('invalid-api-key').samples
+        expects_error_response(response, 401)
+      end
     end
-  end
 
-  it 'returns success and API rate limit information' do
-    VCR.use_cassette('players', record: :new_episodes) do
-      response = client.players
+    it 'returns success and API rate limit information' do
+      VCR.use_cassette('samples', record: :new_episodes) do
+        response = client.samples
 
-      expects_success_response(response)
-      expect(response.rate_limit).to eq 10
-      expect(response.rate_remaining).to eq 9
-      expect(response.rate_reset).to eq 6000000000
-    end
-  end
-
-  it 'supports multiple regions' do
-    VCR.use_cassette('players', record: :new_episodes) do
-      %w(eu sa ea sg).each do |region|
-        response = VaingloryAPI.new(valid_api_key, region).players
         expects_success_response(response)
+        expect(response.rate_limit).to be_a(Integer)
+        expect(response.rate_remaining).to be_a(Integer)
+        expect(response.rate_reset).to be_a(Integer)
+      end
+    end
+
+    it 'supports multiple regions' do
+      VCR.use_cassette('samples', record: :new_episodes) do
+        %w(eu sa ea sg).each do |region|
+          response = VaingloryAPI.new(valid_api_key, region).samples
+          expects_success_response(response)
+        end
       end
     end
   end
@@ -37,10 +39,10 @@ describe 'VaingloryAPI spec', vcr: true do
         response = client.status
 
         expects_success_response(response)
-        expect(response.data.type).to eq 'status'
-        expect(response.data.id).to eq 'gamelocker'
-        expect(response.data.attributes.releasedAt).to eq '2017-03-25T01:36:45Z'
-        expect(response.data.attributes.version).to eq 'master'
+        expect(response.data.type).to be_a(String)
+        expect(response.data.id).to be_a(String)
+        expect(response.data.attributes.releasedAt).to be_a(String)
+        expect(response.data.attributes.version).to be_a(String)
       end
     end
   end
