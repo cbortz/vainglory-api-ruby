@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.dc01.gamelockerapp.com/shards/na/players/a2fe147e-2515-11e5-be61-06d90c28bf1a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.dc01.gamelockerapp.com
+      Authorization:
+      - Bearer valid_api_key
+      X-Title-Id:
+      - semc-vainglory
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 26 May 2017 19:46:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '347'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Limit:
+      - '10'
+      X-Ratelimit-Remaining:
+      - '1'
+      X-Ratelimit-Reset:
+      - '50819970000'
+      X-Request-Id:
+      - b6757a7c-d9b7-4ecb-adaf-a121be561900
+      X-Title-Id:
+      - semc-vainglory
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {"data":{"type":"player","id":"a2fe147e-2515-11e5-be61-06d90c28bf1a","attributes":{"createdAt":"2017-05-26T18:00:00Z","name":"Linkosoul","shardId":"na","stats":{"karmaLevel":2,"level":29,"lifetimeGold":23571.25,"lossStreak":0,"played":1244,"played_ranked":1281,"skillTier":1,"winStreak":0,"wins":535,"xp":157764},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},"links":{"self":"https://api.dc01.gamelockerapp.com/shards/na/players/a2fe147e-2515-11e5-be61-06d90c28bf1a"},"meta":{}}
+    http_version:
+  recorded_at: Fri, 26 May 2017 19:46:04 GMT
+recorded_with: VCR 3.0.3
