@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "VaingloryAPI spec", vcr: true do
-  let(:valid_api_key) { "valid_api_key" }
+describe 'VaingloryAPI spec', vcr: true do
+  let(:valid_api_key) { 'valid_api_key' }
   let(:client) { VaingloryAPI.new(valid_api_key) }
 
   it 'returns an error with an invalid API key' do
@@ -31,9 +31,9 @@ describe "VaingloryAPI spec", vcr: true do
     end
   end
 
-  context "#status" do
+  context '#status' do
     it 'returns a status object' do
-      VCR.use_cassette("status") do
+      VCR.use_cassette('status') do
         response = client.status
 
         expects_success_response(response)
@@ -45,7 +45,7 @@ describe "VaingloryAPI spec", vcr: true do
     end
   end
 
-  context "#players" do
+  context '#players' do
     it 'returns an array of players with a valid name' do
       VCR.use_cassette("players", record: :new_episodes) do
         response = client.players('boombastic04')
@@ -57,14 +57,14 @@ describe "VaingloryAPI spec", vcr: true do
     end
 
     it 'returns error with an valid name' do
-      VCR.use_cassette("players", record: :new_episodes) do
-        response = client.players("TheRealKrul")
+      VCR.use_cassette('players', record: :new_episodes) do
+        response = client.players('TheRealKrul')
         expects_error_response(response)
       end
     end
   end
 
-  context "#player" do
+  context '#player' do
     it 'returns a player with a valid ID' do
       VCR.use_cassette("players", record: :new_episodes) do
         response = client.player("6abb30de-7cb8-11e4-8bd3-06eb725f8a76")
@@ -89,16 +89,16 @@ describe "VaingloryAPI spec", vcr: true do
     end
 
     it 'returns an error with an invalid ID' do
-      VCR.use_cassette("players", record: :new_episodes) do
-        response = client.player("invalid-id")
+      VCR.use_cassette('players', record: :new_episodes) do
+        response = client.player('invalid-id')
         expects_error_response(response)
       end
     end
   end
 
-  context "#matches" do
+  context '#matches' do
     it 'returns an array of matches' do
-      VCR.use_cassette("matches", record: :new_episodes) do
+      VCR.use_cassette('matches', record: :new_episodes) do
         response = client.matches
 
         expects_success_response(response)
@@ -108,8 +108,8 @@ describe "VaingloryAPI spec", vcr: true do
     end
 
     it 'returns the number of matches specified by a filter' do
-      VCR.use_cassette("matches", record: :new_episodes) do
-        response = client.matches({'page[limit]' => 1})
+      VCR.use_cassette('matches', record: :new_episodes) do
+        response = client.matches('page[limit]' => 1)
 
         expects_success_response(response)
         expect(response.data).to be_a(Array)
@@ -118,8 +118,8 @@ describe "VaingloryAPI spec", vcr: true do
     end
 
     it 'returns an array of matches with valid player name filter' do
-      VCR.use_cassette("matches", record: :new_episodes) do
         response = client.matches({'filter[playerNames]' => 'KngBEAZT'})
+      VCR.use_cassette('matches', record: :new_episodes) do
 
         expects_success_response(response)
         expect(response.data).to be_a(Array)
@@ -128,17 +128,17 @@ describe "VaingloryAPI spec", vcr: true do
     end
 
     it 'returns an error with invalid player name filter' do
-      VCR.use_cassette("matches", record: :new_episodes) do
-        response = client.matches({'filter[playerNames]' => 'TheRealKrul'})
+      VCR.use_cassette('matches', record: :new_episodes) do
+        response = client.matches('filter[playerNames]' => 'TheRealKrul')
         expects_error_response(response)
       end
     end
   end
 
-  context "#match" do
+  context '#match' do
     it 'returns a match with a valid ID' do
-      VCR.use_cassette("match", record: :new_episodes) do
         response = client.match("37f94e56-1360-11e7-a250-062445d3d668")
+      VCR.use_cassette('match', record: :new_episodes) do
         game_match = response.data
 
         expects_success_response(response)
@@ -163,8 +163,8 @@ describe "VaingloryAPI spec", vcr: true do
     end
 
     it 'returns an error with an invalid ID' do
-      VCR.use_cassette("match", record: :new_episodes) do
-        response = client.match("invalid-id")
+      VCR.use_cassette('match', record: :new_episodes) do
+        response = client.match('invalid-id')
         expects_error_response(response)
       end
     end
@@ -172,7 +172,7 @@ describe "VaingloryAPI spec", vcr: true do
 
   context 'telemetry' do
     it 'returns telemetry data for a valid URL' do
-      VCR.use_cassette("telemetry", record: :new_episodes) do
+      VCR.use_cassette('telemetry', record: :new_episodes) do
         response = client.telemetry('https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/28/03/07/b0bb7faf-1363-11e7-b11e-0242ac110006-telemetry.json')
 
         expects_success_response(response)
@@ -188,19 +188,19 @@ describe "VaingloryAPI spec", vcr: true do
 
   context '#teams' do
     it 'raises error' do
-      expect{ client.teams }.to raise_error(NotImplementedError)
+      expect { client.teams }.to raise_error(NotImplementedError)
     end
   end
 
   context '#team' do
     it 'raises error' do
-      expect{ client.team('team_id') }.to raise_error(NotImplementedError)
+      expect { client.team('team_id') }.to raise_error(NotImplementedError)
     end
   end
 
   context '#link' do
     it 'raises error' do
-      expect{ client.link('link_id') }.to raise_error(NotImplementedError)
+      expect { client.link('link_id') }.to raise_error(NotImplementedError)
     end
   end
 

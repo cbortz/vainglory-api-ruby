@@ -4,9 +4,9 @@ require 'openssl'
 require 'net/http'
 
 class VaingloryAPI
-  BASE_URL = "https://api.dc01.gamelockerapp.com"
+  BASE_URL = 'https://api.dc01.gamelockerapp.com'.freeze
 
-  def initialize(api_key, region = "na")
+  def initialize(api_key, region = 'na')
     @api_key = api_key
     @region = region
   end
@@ -38,15 +38,15 @@ class VaingloryAPI
   end
 
   def teams(filter_params = {})
-    raise(NotImplementedError, "Coming soon!")
+    raise(NotImplementedError, 'Coming soon!')
   end
 
   def team(team_id)
-    raise(NotImplementedError, "Coming soon!")
+    raise(NotImplementedError, 'Coming soon!')
   end
 
   def link(link_id)
-    raise(NotImplementedError, "Coming soon!")
+    raise(NotImplementedError, 'Coming soon!')
   end
 
   def status
@@ -68,8 +68,8 @@ class VaingloryAPI
 
   def apply_headers(req, with_auth = true)
     req['Authorization'] = "Bearer #{@api_key}" if with_auth
-    req['X-TITLE-ID'] = "semc-vainglory"
-    req['Accept'] = "application/vnd.api+json"
+    req['X-TITLE-ID'] = 'semc-vainglory'
+    req['Accept'] = 'application/vnd.api+json'
 
     req
   end
