@@ -19,6 +19,7 @@ describe 'VaingloryAPI spec', vcr: true do
         response = client.samples
 
         expects_success_response(response)
+        expects_presence(response, :data)
         expect(response.rate_limit).to be_a(Integer)
         expect(response.rate_remaining).to be_a(Integer)
         expect(response.rate_reset).to be_a(Integer)
@@ -41,6 +42,7 @@ describe 'VaingloryAPI spec', vcr: true do
         response = client.status
 
         expects_success_response(response)
+        expects_presence(response, :data)
         expect(response.data.type).to be_a(String)
         expect(response.data.id).to be_a(String)
         expect(response.data.attributes.releasedAt).to be_a(String)
@@ -56,6 +58,7 @@ describe 'VaingloryAPI spec', vcr: true do
         response = client.players(*valid_names)
 
         expects_success_response(response)
+        expects_presence(response, :data, :links, :meta)
         expect(response.data).to be_a(Array)
         expect(response.data.length).to be > 0
       end
@@ -75,11 +78,11 @@ describe 'VaingloryAPI spec', vcr: true do
         cached_player_id = cached_players.first.id
         response = client.player(cached_player_id)
 
-        expect(response.data).to_not be_nil
-
         player = response.data
 
         expects_success_response(response)
+        expects_presence(response, :data, :links, :meta)
+
         expect(player.type).to eq 'player'
         expect(player.id).to eq cached_player_id
         expect(player.attributes.createdAt).to be_a(String)
@@ -110,7 +113,9 @@ describe 'VaingloryAPI spec', vcr: true do
       VCR.use_cassette('matches', record: :new_episodes) do
         response = client.matches
 
-        expects_matches(response)
+        expects_success_response(response)
+        expects_presence(response, :data, :included, :links, :meta)
+        expect(response.data).to be_a(Array)
         expect(response.data.length).to be > 0
       end
     end
@@ -119,7 +124,9 @@ describe 'VaingloryAPI spec', vcr: true do
       VCR.use_cassette('matches', record: :new_episodes) do
         response = client.matches('page[limit]' => 1)
 
-        expects_matches(response)
+        expects_success_response(response)
+        expects_presence(response, :data, :included, :links, :meta)
+        expect(response.data).to be_a(Array)
         expect(response.data.length).to eq 1
       end
     end
@@ -129,7 +136,9 @@ describe 'VaingloryAPI spec', vcr: true do
       VCR.use_cassette('matches', record: :new_episodes) do
         response = client.matches('filter[playerNames]' => player_name)
 
-        expects_matches(response)
+        expects_success_response(response)
+        expects_presence(response, :data, :included, :links, :meta)
+        expect(response.data).to be_a(Array)
         expect(response.data.length).to be > 0
       end
     end
@@ -150,6 +159,7 @@ describe 'VaingloryAPI spec', vcr: true do
         game_match = response.data
 
         expects_success_response(response)
+        expects_presence(response, :data, :included, :links, :meta)
         expect(game_match.type).to eq 'match'
         expect(game_match.id).to eq cached_match_id
         expect(game_match.attributes.createdAt).to be_a(String)
@@ -211,14 +221,10 @@ describe 'VaingloryAPI spec', vcr: true do
     end
   end
 
-  def expects_matches(response)
-    expects_success_response(response)
-
-    expect(response.data).to_not be_nil
-    expect(response.included).to_not be_nil
-    expect(response.links).to_not be_nil
-    expect(response.meta).to_not be_nil
-    expect(response.data).to be_a(Array)
+  def expects_presence(obj, *attrs)
+    attrs.each do |attr_name|
+      expect(obj.send(attr_name)).to_not be_nil
+    end
   end
 
   def expects_success_response(response)
