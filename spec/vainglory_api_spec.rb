@@ -46,16 +46,6 @@ describe "VaingloryAPI spec", vcr: true do
   end
 
   context "#players" do
-    it 'returns an array of players' do
-      VCR.use_cassette("players", record: :new_episodes) do
-        response = client.players
-
-        expects_success_response(response)
-        expect(response.data).to be_a(Array)
-        expect(response.data.length).to be > 0
-      end
-    end
-
     it 'returns an array of players with a valid name' do
       VCR.use_cassette("players", record: :new_episodes) do
         response = client.players('boombastic04')

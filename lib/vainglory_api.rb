@@ -23,8 +23,9 @@ class VaingloryAPI
     get_request(endpoint_uri("shards/#{@region}/matches/#{match_id}"))
   end
 
-  def players(*names)
-    filter_params = {"filter[playerNames]" => names.join(',')}
+  def players(player_name, *additional_player_names)
+    player_names = [player_name].concat(additional_player_names)
+    filter_params = { 'filter[playerNames]' => player_names.join(',') }
     get_request(endpoint_uri("shards/#{@region}/players", filter_params))
   end
 
