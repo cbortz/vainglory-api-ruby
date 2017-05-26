@@ -93,18 +93,36 @@ class VaingloryAPI
   end
 
   def response(response_data)
-    parsed_body = JSON.parse(response_data.body, object_class: OpenStruct)
-    parsed_code = response_data.code.to_i
+    response_object = serialize_response_data(response_data.body)
+    metadata        = serialize_response_metadata(response_data)
 
-    OpenStruct.new({
-      code:           parsed_code,
-      success?:       parsed_code < 300,
+    metadata.each do |k, v|
+      response_object[k] = v
+    end
+
+    response_object
+  end
+
+  def serialize_response_metadata(response_data)
+    response_code = response_data.code.to_i
+
+    {
+      code:           response_code,
+      success?:       response_code < 300,
       rate_limit:     response_data['X-RateLimit-Limit'].to_i,
       rate_remaining: response_data['X-RateLimit-Remaining'].to_i,
       rate_reset:     response_data['X-RateLimit-Reset'].to_i,
-      data:           parsed_body.respond_to?(:data) ? parsed_body.data : parsed_body,
-      error:          parsed_body.respond_to?(:error)? parsed_body.error : nil,
       raw:            response_data
-    })
+    }
+  end
+
+  def serialize_response_data(raw_response_body)
+    data = JSON.parse(raw_response_body, object_class: OpenStruct)
+
+    if data.is_a?(Array)
+      OpenStruct.new(data: data)
+    else
+      data
+    end
   end
 end
