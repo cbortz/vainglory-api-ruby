@@ -3,6 +3,8 @@ require 'spec_helper'
 describe 'VaingloryAPI spec', vcr: true do
   let(:valid_api_key) { 'valid_api_key' }
   let(:client) { VaingloryAPI.new(valid_api_key) }
+  let(:cached_matches) { let_cassette('matches') { client.matches } }
+  let(:cached_players) { cached_matches.included.select { |i| i.type == 'player' }}
 
   context 'metadata' do
     it 'returns an error with an invalid API key' do
@@ -49,8 +51,9 @@ describe 'VaingloryAPI spec', vcr: true do
 
   context '#players' do
     it 'returns an array of players with a valid name' do
-      VCR.use_cassette("players", record: :new_episodes) do
-        response = client.players('boombastic04')
+      VCR.use_cassette('players', record: :new_episodes) do
+        valid_names = cached_players[0, 2].map { |p| p.attributes.name }
+        response = client.players(*valid_names)
 
         expects_success_response(response)
         expect(response.data).to be_a(Array)
@@ -68,25 +71,29 @@ describe 'VaingloryAPI spec', vcr: true do
 
   context '#player' do
     it 'returns a player with a valid ID' do
-      VCR.use_cassette("players", record: :new_episodes) do
-        response = client.player("6abb30de-7cb8-11e4-8bd3-06eb725f8a76")
+      VCR.use_cassette('player', record: :new_episodes) do
+        cached_player_id = cached_players.first.id
+        response = client.player(cached_player_id)
+
+        expect(response.data).to_not be_nil
+
         player = response.data
 
         expects_success_response(response)
         expect(player.type).to eq 'player'
-        expect(player.id).to eq '6abb30de-7cb8-11e4-8bd3-06eb725f8a76'
-        expect(player.attributes.createdAt).to eq '2017-03-15T19:46:43Z'
-        expect(player.attributes.name).to eq 'boombastic04'
-        expect(player.attributes.shardId).to eq 'na'
-        expect(player.attributes.stats.level).to eq 30
-        expect(player.attributes.stats.lifetimeGold).to eq 18087.5
-        expect(player.attributes.stats.lossStreak).to eq 1
-        expect(player.attributes.stats.played).to eq 1564
-        expect(player.attributes.stats.played_ranked).to eq 155
-        expect(player.attributes.stats.winStreak).to eq 0
-        expect(player.attributes.stats.wins).to eq 859
-        expect(player.attributes.stats.xp).to eq 175450
-        expect(player.attributes.titleId).to eq 'semc-vainglory'
+        expect(player.id).to eq cached_player_id
+        expect(player.attributes.createdAt).to be_a(String)
+        expect(player.attributes.name).to be_a(String)
+        expect(player.attributes.shardId).to be_a(String)
+        expect(player.attributes.stats.level).to be_a(Integer)
+        expect(player.attributes.stats.lifetimeGold).to be_a(Float)
+        expect(player.attributes.stats.lossStreak).to be_a(Integer)
+        expect(player.attributes.stats.played).to be_a(Integer)
+        expect(player.attributes.stats.played_ranked).to be_a(Integer)
+        expect(player.attributes.stats.winStreak).to be_a(Integer)
+        expect(player.attributes.stats.wins).to be_a(Integer)
+        expect(player.attributes.stats.xp).to be_a(Integer)
+        expect(player.attributes.titleId).to be_a(String)
       end
     end
 
@@ -103,8 +110,7 @@ describe 'VaingloryAPI spec', vcr: true do
       VCR.use_cassette('matches', record: :new_episodes) do
         response = client.matches
 
-        expects_success_response(response)
-        expect(response.data).to be_a(Array)
+        expects_matches(response)
         expect(response.data.length).to be > 0
       end
     end
@@ -113,18 +119,17 @@ describe 'VaingloryAPI spec', vcr: true do
       VCR.use_cassette('matches', record: :new_episodes) do
         response = client.matches('page[limit]' => 1)
 
-        expects_success_response(response)
-        expect(response.data).to be_a(Array)
+        expects_matches(response)
         expect(response.data.length).to eq 1
       end
     end
 
     it 'returns an array of matches with valid player name filter' do
-        response = client.matches({'filter[playerNames]' => 'KngBEAZT'})
+      player_name = cached_players.first.attributes.name
       VCR.use_cassette('matches', record: :new_episodes) do
+        response = client.matches('filter[playerNames]' => player_name)
 
-        expects_success_response(response)
-        expect(response.data).to be_a(Array)
+        expects_matches(response)
         expect(response.data.length).to be > 0
       end
     end
@@ -139,28 +144,29 @@ describe 'VaingloryAPI spec', vcr: true do
 
   context '#match' do
     it 'returns a match with a valid ID' do
-        response = client.match("37f94e56-1360-11e7-a250-062445d3d668")
       VCR.use_cassette('match', record: :new_episodes) do
+        cached_match_id = cached_matches.data.first.id
+        response = client.match(cached_match_id)
         game_match = response.data
 
         expects_success_response(response)
         expect(game_match.type).to eq 'match'
-        expect(game_match.id).to eq '37f94e56-1360-11e7-a250-062445d3d668'
-        expect(game_match.attributes.createdAt).to eq '2017-03-28T02:42:53Z'
-        expect(game_match.attributes.duration).to eq 924
-        expect(game_match.attributes.gameMode).to eq 'casual'
-        expect(game_match.attributes.patchVersion).to eq ''
-        expect(game_match.attributes.shardId).to eq 'na'
-        expect(game_match.attributes.stats.endGameReason).to eq 'victory'
-        expect(game_match.attributes.stats.queue).to eq 'casual'
-        expect(game_match.attributes.titleId).to eq 'semc-vainglory'
+        expect(game_match.id).to eq cached_match_id
+        expect(game_match.attributes.createdAt).to be_a(String)
+        expect(game_match.attributes.duration).to be_a(Integer)
+        expect(game_match.attributes.gameMode).to be_a(String)
+        expect(game_match.attributes.patchVersion).to be_a(String)
+        expect(game_match.attributes.shardId).to be_a(String)
+        expect(game_match.attributes.stats.endGameReason).to be_a(String)
+        expect(game_match.attributes.stats.queue).to be_a(String)
+        expect(game_match.attributes.titleId).to be_a(String)
         expect(game_match.relationships.assets.data).to be_a(Array)
-        expect(game_match.relationships.assets.data[0].type).to eq 'asset'
-        expect(game_match.relationships.assets.data[0].id).to eq '935cc70c-1362-11e7-9a29-0242ac110009'
+        expect(game_match.relationships.assets.data[0].type).to be_a(String)
+        expect(game_match.relationships.assets.data[0].id).to be_a(String)
         expect(game_match.relationships.rosters.data).to be_a(Array)
-        expect(game_match.relationships.rosters.data.length).to eq 2
+        expect(game_match.relationships.rosters.data.length).to be_a(Integer)
         expect(game_match.relationships.rounds.data).to be_a(Array)
-        expect(game_match.relationships.rounds.data.length).to eq 0
+        expect(game_match.relationships.rounds.data.length).to be_a(Integer)
       end
     end
 
@@ -179,11 +185,10 @@ describe 'VaingloryAPI spec', vcr: true do
 
         expects_success_response(response)
         expect(response.data).to be_a Array
-        expect(response.data[0].time).to eq '2017-03-28T03:02:09+0000'
-        expect(response.data[0].type).to eq 'PlayerFirstSpawn'
-        expect(response.data[0].payload.Team).to eq 'Left'
-        expect(response.data[0].payload.Actor).to eq '*Ringo*'
-
+        expect(response.data[0].time).to be_a(String)
+        expect(response.data[0].type).to be_a(String)
+        expect(response.data[0].payload.Team).to be_a(String)
+        expect(response.data[0].payload.Actor).to be_a(String)
       end
     end
   end
@@ -206,6 +211,16 @@ describe 'VaingloryAPI spec', vcr: true do
     end
   end
 
+  def expects_matches(response)
+    expects_success_response(response)
+
+    expect(response.data).to_not be_nil
+    expect(response.included).to_not be_nil
+    expect(response.links).to_not be_nil
+    expect(response.meta).to_not be_nil
+    expect(response.data).to be_a(Array)
+  end
+
   def expects_success_response(response)
     expect(response.code).to eq 200
     expect(response.success?).to be true
@@ -214,5 +229,11 @@ describe 'VaingloryAPI spec', vcr: true do
   def expects_error_response(response, response_code = 404)
     expect(response.code).to eq response_code
     expect(response.success?).to be false
+  end
+
+  def let_cassette(cassette_name)
+    VCR.use_cassette(cassette_name, record: :new_episodes) do
+      yield
+    end
   end
 end
