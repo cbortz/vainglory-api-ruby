@@ -57,8 +57,8 @@ More information: https://developer.vainglorygame.com/docs#rate-limits
 
 Currently, filters are supported by these client methods:
 
-- `VaingloryAPI#matches`
-- `VaingloryAPI#samples`
+- `VaingloryAPI::Client#matches`
+- `VaingloryAPI::Client#samples`
 
 You can pass filters in as a hash using the exact Query Parameter key names outlined in the [Vainglory API Documentation](https://developer.vainglorygame.com/docs).
 
