@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=
+    uri: https://api.dc01.gamelockerapp.com/shards/na/samples
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       message: Unauthorized
     headers:
       Date:
-      - Tue, 28 Mar 2017 06:21:57 GMT
+      - Fri, 26 May 2017 19:46:01 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -35,7 +35,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Request-Id:
-      - 09a5efca-0c17-41b3-b096-2cb360a5cdb6
+      - d16525ed-44e5-477f-ab05-99d1fc7442d9
       X-Title-Id:
       - semc-vainglory
     body:
@@ -43,5 +43,5 @@ http_interactions:
       string: |
         {"errors":[{"title":"Unauthorized"}]}
     http_version: 
-  recorded_at: Tue, 28 Mar 2017 06:21:57 GMT
+  recorded_at: Fri, 26 May 2017 19:46:01 GMT
 recorded_with: VCR 3.0.3

@@ -4,9 +4,9 @@ require 'openssl'
 require 'net/http'
 
 class VaingloryAPI
-  BASE_URL = "https://api.dc01.gamelockerapp.com"
+  BASE_URL = 'https://api.dc01.gamelockerapp.com'.freeze
 
-  def initialize(api_key, region = "na")
+  def initialize(api_key, region = 'na')
     @api_key = api_key
     @region = region
   end
@@ -23,8 +23,9 @@ class VaingloryAPI
     get_request(endpoint_uri("shards/#{@region}/matches/#{match_id}"))
   end
 
-  def players(*names)
-    filter_params = {"filter[playerNames]" => names.join(',')}
+  def players(player_name, *additional_player_names)
+    player_names = [player_name].concat(additional_player_names)
+    filter_params = { 'filter[playerNames]' => player_names.join(',') }
     get_request(endpoint_uri("shards/#{@region}/players", filter_params))
   end
 
@@ -37,15 +38,15 @@ class VaingloryAPI
   end
 
   def teams(filter_params = {})
-    raise(NotImplementedError, "Coming soon!")
+    raise(NotImplementedError, 'Coming soon!')
   end
 
   def team(team_id)
-    raise(NotImplementedError, "Coming soon!")
+    raise(NotImplementedError, 'Coming soon!')
   end
 
   def link(link_id)
-    raise(NotImplementedError, "Coming soon!")
+    raise(NotImplementedError, 'Coming soon!')
   end
 
   def status
@@ -67,8 +68,8 @@ class VaingloryAPI
 
   def apply_headers(req, with_auth = true)
     req['Authorization'] = "Bearer #{@api_key}" if with_auth
-    req['X-TITLE-ID'] = "semc-vainglory"
-    req['Accept'] = "application/vnd.api+json"
+    req['X-TITLE-ID'] = 'semc-vainglory'
+    req['Accept'] = 'application/vnd.api+json'
 
     req
   end
@@ -93,18 +94,37 @@ class VaingloryAPI
   end
 
   def response(response_data)
-    parsed_body = JSON.parse(response_data.body, object_class: OpenStruct)
-    parsed_code = response_data.code.to_i
+    response_object = serialize_response_data(response_data.body)
+    metadata        = serialize_response_metadata(response_data)
 
-    OpenStruct.new({
-      code:           parsed_code,
-      success?:       parsed_code < 300,
+    # Add metadata members to response_object
+    metadata.each do |k, v|
+      response_object[k] = v
+    end
+
+    response_object
+  end
+
+  def serialize_response_metadata(response_data)
+    response_code = response_data.code.to_i
+
+    {
+      code:           response_code,
+      success?:       response_code < 300,
       rate_limit:     response_data['X-RateLimit-Limit'].to_i,
       rate_remaining: response_data['X-RateLimit-Remaining'].to_i,
       rate_reset:     response_data['X-RateLimit-Reset'].to_i,
-      data:           parsed_body.respond_to?(:data) ? parsed_body.data : parsed_body,
-      error:          parsed_body.respond_to?(:error)? parsed_body.error : nil,
       raw:            response_data
-    })
+    }
+  end
+
+  def serialize_response_data(raw_response_body)
+    data = JSON.parse(raw_response_body, object_class: OpenStruct)
+
+    if data.is_a?(Array)
+      OpenStruct.new(data: data)
+    else
+      data
+    end
   end
 end

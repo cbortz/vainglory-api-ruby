@@ -21,21 +21,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 28 Mar 2017 06:21:58 GMT
+      - Fri, 26 May 2017 19:46:03 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '127'
+      - '131'
       Connection:
       - keep-alive
       Vary:
       - Accept-Encoding
       X-Request-Id:
-      - 2fd3a1f7-00b4-409c-b5f7-9cdb3f014dee
+      - 90963d79-39ca-468a-b804-846e67e61d21
     body:
       encoding: ASCII-8BIT
       string: |
-        {"data":{"type":"status","id":"gamelocker","attributes":{"releasedAt":"2017-03-25T01:36:45Z","version":"master"}}}
+        {"data":{"type":"status","id":"gamelocker","attributes":{"releasedAt":"2017-05-23T14:50:20Z","version":"gamelockerd-v6.1.4"}}}
     http_version: 
-  recorded_at: Tue, 28 Mar 2017 06:21:58 GMT
+  recorded_at: Fri, 26 May 2017 19:46:03 GMT
 recorded_with: VCR 3.0.3

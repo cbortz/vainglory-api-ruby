@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=
+    uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=Linkosoul,jejearo
     body:
       encoding: US-ASCII
       string: ''
@@ -25,61 +25,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 28 Mar 2017 06:21:58 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      X-Ratelimit-Limit:
-      - '10'
-      X-Ratelimit-Remaining:
-      - '9'
-      X-Ratelimit-Reset:
-      - '6000000000'
-      X-Request-Id:
-      - b84d6328-1008-4cbc-b602-5f45365c0593
-      X-Title-Id:
-      - semc-vainglory
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {"data":[{"type":"player","id":"f0a27796-c150-11e6-b92a-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:18:53Z","name":"oneshot911","shardId":"na","stats":{"lifetimeGold":11753,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"1a6d87e8-d5bd-11e6-a38e-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:18:53Z","name":"TDGDrizzy","shardId":"na","stats":{"lifetimeGold":11485.2998046875,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2cf6b9c6-d56c-11e6-941d-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:18:53Z","name":"TDGPaladin012","shardId":"na","stats":{"lifetimeGold":12533.5,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8b99f9c4-d685-11e6-9f9a-06b48b82cd49","attributes":{"createdAt":"2017-01-20T19:18:55Z","name":"LiquidSrkenji","shardId":"na","stats":{"lifetimeGold":11791.150390625,"lossStreak":0,"winStreak":4},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d63fe648-c8f0-11e6-87bc-06a9175d25fa","attributes":{"createdAt":"2017-01-20T19:18:58Z","name":"goarge","shardId":"na","stats":{"lifetimeGold":9675,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0d55aab8-cbfe-11e6-b2f7-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:18:58Z","name":"Nonarchist","shardId":"na","stats":{"lifetimeGold":17272.05078125,"lossStreak":0,"winStreak":5},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"558f4da8-d08f-11e6-88bb-06388a2f2ea7","attributes":{"createdAt":"2017-01-20T19:18:59Z","name":"LeaugeofAhri","shardId":"na","stats":{"lifetimeGold":12310.8994140625,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"64bb3af6-65a2-11e6-8840-06388a2f2ea7","attributes":{"createdAt":"2017-01-20T19:18:59Z","name":"PorosGoRoar","shardId":"na","stats":{"lifetimeGold":17281.599609375,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"63922288-70e0-11e4-8776-06641bcbf424","attributes":{"createdAt":"2017-01-20T19:18:59Z","name":"SmokinHeman","shardId":"na","stats":{"lifetimeGold":12739.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"e9afc7b4-02a5-11e6-9463-0628b69bf6d1","attributes":{"createdAt":"2017-01-20T19:19:00Z","name":"SaberPrower","shardId":"na","stats":{"lifetimeGold":12094,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"7706c1d0-d7a8-11e6-aba9-062cb73cdbb1","attributes":{"createdAt":"2017-01-20T19:19:00Z","name":"EatKFC","shardId":"na","stats":{"lifetimeGold":12477.5498046875,"lossStreak":0,"winStreak":4},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"bda9895e-693c-11e6-8281-06c5ee41a4a5","attributes":{"createdAt":"2017-01-20T19:19:00Z","name":"IHaveNoIdea","shardId":"na","stats":{"lifetimeGold":14086.400390625,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a6e1d322-d22b-11e6-9c48-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:19:00Z","name":"antyB ","shardId":"na","stats":{"lifetimeGold":12138.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4e50fe70-bad6-11e6-8aeb-06ab1a16f8e5","attributes":{"createdAt":"2017-01-20T19:19:01Z","name":"poro33","shardId":"na","stats":{"lifetimeGold":12978.8994140625,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"9108eb0e-64f7-11e6-86d4-062cb73cdbb1","attributes":{"createdAt":"2017-01-20T19:19:04Z","name":"Guest_876610768","shardId":"na","stats":{"lifetimeGold":13779.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"838a8724-5f9a-11e6-a01d-0628b69bf6d1","attributes":{"createdAt":"2017-01-20T19:19:05Z","name":"STK01","shardId":"na","stats":{"lifetimeGold":12157.7001953125,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0ad31c7e-d376-11e6-ba1e-06b48b82cd49","attributes":{"createdAt":"2017-01-20T19:19:06Z","name":"lifestyle247","shardId":"na","stats":{"lifetimeGold":12580.2001953125,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"70a593de-9401-11e5-8798-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:19:06Z","name":"Zero2096","shardId":"na","stats":{"lifetimeGold":14790.150390625,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"95611a12-5b9f-11e5-9996-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:19:07Z","name":"unknown2024","shardId":"na","stats":{"lifetimeGold":14547,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"fc2465bc-cde8-11e6-8c52-06c5ee41a4a5","attributes":{"createdAt":"2017-01-20T19:19:07Z","name":"mota87","shardId":"na","stats":{"lifetimeGold":6031.5,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"48e8f682-d31c-11e6-94da-062cb73cdbb1","attributes":{"createdAt":"2017-01-20T19:19:07Z","name":"mcric","shardId":"na","stats":{"lifetimeGold":7046.7998046875,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"08253504-7098-11e4-9a7f-06641bcbf424","attributes":{"createdAt":"2017-01-20T19:19:10Z","name":"xJuanPii","shardId":"na","stats":{"lifetimeGold":17716.30078125,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f9fa3aca-7698-11e6-89ed-06388a2f2ea7","attributes":{"createdAt":"2017-01-20T19:19:10Z","name":"Kuro1985","shardId":"na","stats":{"lifetimeGold":13985.2001953125,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d7b7b47e-c981-11e6-9ef3-06fc87f1dd11","attributes":{"createdAt":"2017-01-20T19:19:10Z","name":"ItzFranky","shardId":"na","stats":{"lifetimeGold":7692.60009765625,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b201c742-7190-11e4-9389-062d0b175276","attributes":{"createdAt":"2017-01-20T19:19:12Z","name":"Denmaster","shardId":"na","stats":{"lifetimeGold":18502,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"fd328fcc-49f1-11e6-8eb7-062cb73cdbb1","attributes":{"createdAt":"2017-01-20T19:19:12Z","name":"Guest_610094382","shardId":"na","stats":{"lifetimeGold":16285.8994140625,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"995d38ae-cfec-11e6-98e3-068789513eb5","attributes":{"createdAt":"2017-01-20T19:19:12Z","name":"theLegend20","shardId":"na","stats":{"lifetimeGold":14829.400390625,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"66627148-7c11-11e4-a923-06eb725f8a76","attributes":{"createdAt":"2017-01-20T19:19:14Z","name":"Superbian","shardId":"na","stats":{"lifetimeGold":13272.6005859375,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8e7d13ce-6a5c-11e5-a7c4-0628b69bf6d1","attributes":{"createdAt":"2017-01-20T19:19:15Z","name":"L7cker","shardId":"na","stats":{"lifetimeGold":13535,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4e16b942-06d5-11e5-b6e7-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:19:16Z","name":"InsaneGlory","shardId":"na","stats":{"lifetimeGold":17690.5,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"eeea3b2e-c9ab-11e6-9ff0-06eb725f8a76","attributes":{"createdAt":"2017-01-20T19:19:16Z","name":"Viisa","shardId":"na","stats":{"lifetimeGold":14016.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"84e9e100-c697-11e6-9d3b-067e8bc536fd","attributes":{"createdAt":"2017-01-20T19:19:19Z","name":"ObeyCisco","shardId":"na","stats":{"lifetimeGold":6594.7998046875,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c4420328-37fe-11e6-9a1c-062cb73cdbb1","attributes":{"createdAt":"2017-01-20T19:19:19Z","name":"iSilentBob","shardId":"na","stats":{"lifetimeGold":14833.2509765625,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2102d50a-f459-11e4-8cab-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:19:19Z","name":"RRippers","shardId":"na","stats":{"lifetimeGold":10059.9501953125,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"162874d8-b9af-11e6-b928-06eb725f8a76","attributes":{"createdAt":"2017-01-20T19:19:19Z","name":"IllocgicalReap","shardId":"na","stats":{"lifetimeGold":14615.75,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"592aafb8-b81f-11e5-a2f5-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:19:20Z","name":"UliMcree","shardId":"na","stats":{"lifetimeGold":11635.3505859375,"lossStreak":0,"winStreak":4},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5f0e1bb2-343f-11e6-bab3-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:19:21Z","name":"SneakyShaman","shardId":"na","stats":{"lifetimeGold":13543.5986328125,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"3028fe08-712b-11e4-aa10-062d0b175276","attributes":{"createdAt":"2017-01-20T19:19:22Z","name":"CptJack","shardId":"na","stats":{"lifetimeGold":11321.6669921875,"lossStreak":6,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"9f475006-b412-11e6-8467-06ab1a16f8e5","attributes":{"createdAt":"2017-01-20T19:19:24Z","name":"PhoenixHawke","shardId":"na","stats":{"lifetimeGold":17125.80078125,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"41f288fc-b40e-11e6-8d8b-06a9175d25fa","attributes":{"createdAt":"2017-01-20T19:19:25Z","name":"Krista101","shardId":"na","stats":{"lifetimeGold":14856,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"78b03554-5d6d-11e5-9313-06b48b82cd49","attributes":{"createdAt":"2017-01-20T19:19:39Z","name":"caleb1395","shardId":"na","stats":{"lifetimeGold":15278.1005859375,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"429a16ca-cd82-11e6-96da-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:19:42Z","name":"Akabane138","shardId":"na","stats":{"lifetimeGold":12009,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f8cb6d62-3599-11e6-8bd5-067e8bc536fd","attributes":{"createdAt":"2017-01-20T19:19:43Z","name":"Gary26","shardId":"na","stats":{"lifetimeGold":15304.5498046875,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5021bce0-928c-11e4-95d8-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:19:43Z","name":"RougE","shardId":"na","stats":{"lifetimeGold":12484.5,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4ead047e-c1f1-11e5-b379-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:19:45Z","name":"Lilian000","shardId":"na","stats":{"lifetimeGold":12518,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b8e3008a-930f-11e4-8c2f-06d90c28bf1a","attributes":{"createdAt":"2017-01-20T19:19:49Z","name":"Chobits77","shardId":"na","stats":{"lifetimeGold":12770,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"cb143168-9faf-11e5-a880-06f4ee369f53","attributes":{"createdAt":"2017-01-20T19:19:52Z","name":"swiftshot802","shardId":"na","stats":{"lifetimeGold":17846.849609375,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"9d2c8edc-6768-11e5-a588-068789513eb5","attributes":{"createdAt":"2017-01-20T19:19:52Z","name":"vasuki","shardId":"na","stats":{"lifetimeGold":19998.900390625,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"738744b6-cde7-11e4-a74f-06eb725f8a76","attributes":{"createdAt":"2017-01-20T19:19:56Z","name":"str8outtacompton ","shardId":"na","stats":{"lifetimeGold":14845.9990234375,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"53c3b156-8465-11e6-95cb-062cb73cdbb1","attributes":{"createdAt":"2017-01-20T19:19:57Z","name":"iRaqiZoRRoBestNA","shardId":"na","stats":{"lifetimeGold":17415.25,"lossStreak":0,"winStreak":5},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}]}
-    http_version:
-  recorded_at: Tue, 28 Mar 2017 06:21:58 GMT
-- request:
-    method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=boombastic04
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Ruby
-      Host:
-      - api.dc01.gamelockerapp.com
-      Authorization:
-      - Bearer valid_api_key
-      X-Title-Id:
-      - semc-vainglory
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 28 Mar 2017 06:21:58 GMT
+      - Fri, 26 May 2017 19:46:04 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '275'
+      - '443'
       Connection:
       - keep-alive
       Vary:
@@ -87,19 +37,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '10'
       X-Ratelimit-Remaining:
-      - '8'
+      - '3'
       X-Ratelimit-Reset:
-      - '11463507000'
+      - '39650156000'
       X-Request-Id:
-      - 2bd94648-3e09-4bda-8f31-62e72f23e8b3
+      - 13724a80-7048-4ab1-aced-a6ba0e1542b5
       X-Title-Id:
       - semc-vainglory
     body:
       encoding: ASCII-8BIT
       string: |
-        {"data":[{"type":"player","id":"6abb30de-7cb8-11e4-8bd3-06eb725f8a76","attributes":{"createdAt":"2017-03-15T19:46:43Z","name":"boombastic04","shardId":"na","stats":{"level":30,"lifetimeGold":18087.5,"lossStreak":1,"played":1564,"played_ranked":155,"winStreak":0,"wins":859,"xp":175450},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}]}
+        {"data":[{"type":"player","id":"e9bf6cb4-54ef-11e5-8a52-06d90c28bf1a","attributes":{"createdAt":"2017-05-26T17:23:26Z","name":"jejearo","shardId":"na","stats":{"karmaLevel":1,"level":30,"lifetimeGold":15534.25,"lossStreak":0,"played":2141,"played_ranked":3858,"skillTier":-1,"winStreak":0,"wins":2180,"xp":175450},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a2fe147e-2515-11e5-be61-06d90c28bf1a","attributes":{"createdAt":"2017-05-26T18:00:00Z","name":"Linkosoul","shardId":"na","stats":{"karmaLevel":2,"level":29,"lifetimeGold":23571.25,"lossStreak":0,"played":1244,"played_ranked":1281,"skillTier":1,"winStreak":0,"wins":535,"xp":157764},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}],"links":{"self":"https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=Linkosoul,jejearo"},"meta":{}}
     http_version:
-  recorded_at: Tue, 28 Mar 2017 06:21:58 GMT
+  recorded_at: Fri, 26 May 2017 19:46:03 GMT
 - request:
     method: get
     uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=TheRealKrul
@@ -125,11 +75,11 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 28 Mar 2017 06:21:58 GMT
+      - Fri, 26 May 2017 19:46:04 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '124'
+      - '125'
       Connection:
       - keep-alive
       Vary:
@@ -137,69 +87,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '10'
       X-Ratelimit-Remaining:
-      - '7'
+      - '2'
       X-Ratelimit-Reset:
-      - '17195963000'
+      - '45380989000'
       X-Request-Id:
-      - f175af04-5356-40c8-ace7-48a51f43dea9
+      - c95d877b-ec3b-437f-b8d2-ac1a440142b8
       X-Title-Id:
       - semc-vainglory
     body:
       encoding: ASCII-8BIT
       string: |
-        {"errors":[{"title":"Not Found","detail":"criteria: \u0026{ na [TheRealKrul] [] 50 0 semc-vainglory}"}]}
+        {"errors":[{"title":"Not Found","detail":"criteria: \u0026{ na [TheRealKrul] [] 6 0 0 semc-vainglory}"}]}
     http_version:
-  recorded_at: Tue, 28 Mar 2017 06:21:58 GMT
-- request:
-    method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/na/players/6abb30de-7cb8-11e4-8bd3-06eb725f8a76
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Ruby
-      Host:
-      - api.dc01.gamelockerapp.com
-      Authorization:
-      - Bearer valid_api_key
-      X-Title-Id:
-      - semc-vainglory
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 28 Mar 2017 06:21:59 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '274'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      X-Ratelimit-Limit:
-      - '10'
-      X-Ratelimit-Remaining:
-      - '6'
-      X-Ratelimit-Reset:
-      - '22924792000'
-      X-Request-Id:
-      - 7b3255ac-4443-4708-b922-2c302464a908
-      X-Title-Id:
-      - semc-vainglory
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {"data":{"type":"player","id":"6abb30de-7cb8-11e4-8bd3-06eb725f8a76","attributes":{"createdAt":"2017-03-15T19:46:43Z","name":"boombastic04","shardId":"na","stats":{"level":30,"lifetimeGold":18087.5,"lossStreak":1,"played":1564,"played_ranked":155,"winStreak":0,"wins":859,"xp":175450},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}}
-    http_version:
-  recorded_at: Tue, 28 Mar 2017 06:21:59 GMT
+  recorded_at: Fri, 26 May 2017 19:46:04 GMT
 - request:
     method: get
     uri: https://api.dc01.gamelockerapp.com/shards/na/players/invalid-id
@@ -225,7 +125,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 28 Mar 2017 06:21:59 GMT
+      - Fri, 26 May 2017 19:46:05 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -237,11 +137,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '10'
       X-Ratelimit-Remaining:
-      - '5'
+      - '0'
       X-Ratelimit-Reset:
-      - '28656141000'
+      - '56541068000'
       X-Request-Id:
-      - eced9e67-1257-4fb0-b194-32de7707ece1
+      - 7b7733af-fb5c-4ff1-b93d-2ca1bdd0a3ee
       X-Title-Id:
       - semc-vainglory
     body:
@@ -249,205 +149,5 @@ http_interactions:
       string: |
         {"errors":[{"title":"Not Found"}]}
     http_version:
-  recorded_at: Tue, 28 Mar 2017 06:21:59 GMT
-- request:
-    method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/eu/players?filter%5BplayerNames%5D=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Ruby
-      Host:
-      - api.dc01.gamelockerapp.com
-      Authorization:
-      - Bearer valid_api_key
-      X-Title-Id:
-      - semc-vainglory
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 28 Mar 2017 06:28:57 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      X-Ratelimit-Limit:
-      - '10'
-      X-Ratelimit-Remaining:
-      - '9'
-      X-Ratelimit-Reset:
-      - '6000000000'
-      X-Request-Id:
-      - 2cb282b7-b331-4e0a-8ded-c7d805842faa
-      X-Title-Id:
-      - semc-vainglory
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {"data":[{"type":"player","id":"32e82370-bfcc-11e6-ade0-06388a2f2ea7","attributes":{"createdAt":"2017-01-27T20:48:16Z","name":"BhenKaTaka","shardId":"eu","stats":{"lifetimeGold":19469.375,"lossStreak":0,"winStreak":7},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5f05c608-d1b9-11e5-9086-06388a2f2ea7","attributes":{"createdAt":"2017-01-27T20:48:18Z","name":"jacim","shardId":"eu","stats":{"lifetimeGold":9021.875,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"209db250-df40-11e6-ac12-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:48:19Z","name":"MaxusDamage","shardId":"eu","stats":{"lifetimeGold":10695.5,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"9492182a-c936-11e5-94ac-06d90c28bf1a","attributes":{"createdAt":"2017-01-27T20:48:20Z","name":"TRMONAD","shardId":"eu","stats":{"lifetimeGold":13113.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f8323912-d4cc-11e6-a234-06b48b82cd49","attributes":{"createdAt":"2017-01-27T20:48:20Z","name":"Guest_828836661","shardId":"eu","stats":{"lifetimeGold":6455,"lossStreak":6,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8e18f69c-cef0-11e6-9d6f-062cb73cdbb1","attributes":{"createdAt":"2017-01-27T20:48:23Z","name":"elQekurGamer","shardId":"eu","stats":{"lifetimeGold":16267,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"76b9083e-e174-11e6-b90b-06f4ee369f53","attributes":{"createdAt":"2017-01-27T20:48:28Z","name":"GDWSLayer","shardId":"eu","stats":{"lifetimeGold":9478.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"dd6d4d82-e30a-11e6-94f5-06a9175d25fa","attributes":{"createdAt":"2017-01-27T20:48:29Z","name":"intking","shardId":"eu","stats":{"lifetimeGold":7492.5,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"968070de-de55-11e6-b425-06f4ee369f53","attributes":{"createdAt":"2017-01-27T20:48:29Z","name":"Ravaneuss","shardId":"eu","stats":{"lifetimeGold":9153,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"52588ee0-c2ea-11e6-9a1b-06b48b82cd49","attributes":{"createdAt":"2017-01-27T20:48:29Z","name":"Clovefox","shardId":"eu","stats":{"lifetimeGold":10501.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f6e32758-d592-11e6-ad92-06a9175d25fa","attributes":{"createdAt":"2017-01-27T20:48:32Z","name":"kilhans","shardId":"eu","stats":{"lifetimeGold":18829,"lossStreak":0,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a1431892-b650-11e5-9fbb-06d90c28bf1a","attributes":{"createdAt":"2017-01-27T20:48:37Z","name":"KodexMH","shardId":"eu","stats":{"lifetimeGold":7500,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0ea1be88-be44-11e6-96f8-06a9175d25fa","attributes":{"createdAt":"2017-01-27T20:48:40Z","name":"Gribonelove1","shardId":"eu","stats":{"lifetimeGold":12486.6669921875,"lossStreak":6,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"bd75a588-529b-11e6-baa4-06fc87f1dd11","attributes":{"createdAt":"2017-01-27T20:48:41Z","name":"xaviergb","shardId":"eu","stats":{"lifetimeGold":13038,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"71182c14-9901-11e5-8d73-068789513eb5","attributes":{"createdAt":"2017-01-27T20:48:41Z","name":"JoKrZz","shardId":"eu","stats":{"lifetimeGold":9331.25,"lossStreak":6,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"edc0b93c-0704-11e5-af33-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:48:42Z","name":"benja2001","shardId":"eu","stats":{"lifetimeGold":10291.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b3f6fea4-b6ba-11e4-8d9a-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:48:43Z","name":"romanian1998","shardId":"eu","stats":{"lifetimeGold":12262.875,"lossStreak":9,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"66382a6c-d03a-11e6-9f0a-068789513eb5","attributes":{"createdAt":"2017-01-27T20:48:45Z","name":"Tbili","shardId":"eu","stats":{"lifetimeGold":17868.54296875,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"06b00f22-dfaf-11e6-85b7-06a9175d25fa","attributes":{"createdAt":"2017-01-27T20:48:49Z","name":"krmkeser1617","shardId":"eu","stats":{"lifetimeGold":10960.25,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c954d2d4-d081-11e6-a1bf-062cb73cdbb1","attributes":{"createdAt":"2017-01-27T20:48:49Z","name":"landerga","shardId":"eu","stats":{"lifetimeGold":16172.25,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"574177ac-0f52-11e5-9fd1-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:48:54Z","name":"wazi7","shardId":"eu","stats":{"lifetimeGold":10349.5,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"455f00c4-e2d0-11e6-9bf2-068789513eb5","attributes":{"createdAt":"2017-01-27T20:48:58Z","name":"Bagai015","shardId":"eu","stats":{"lifetimeGold":11135,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2f80e9ba-b2e8-11e6-b8a3-06f4ee369f53","attributes":{"createdAt":"2017-01-27T20:49:04Z","name":"envy17","shardId":"eu","stats":{"lifetimeGold":13162.875,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a3c19088-1476-11e6-822c-0628b69bf6d1","attributes":{"createdAt":"2017-01-27T20:49:05Z","name":"hskske","shardId":"eu","stats":{"lifetimeGold":10630.2919921875,"lossStreak":5,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"af870326-8357-11e6-9355-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:49:13Z","name":"oplot","shardId":"eu","stats":{"lifetimeGold":7596,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8498a5d6-1281-11e5-9851-06d90c28bf1a","attributes":{"createdAt":"2017-01-27T20:49:13Z","name":"shlez","shardId":"eu","stats":{"lifetimeGold":9534.5,"lossStreak":8,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"46c97516-ca76-11e5-b9ab-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:49:14Z","name":"AboughalyX","shardId":"eu","stats":{"lifetimeGold":15270.25,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"82a1c02c-e2f1-11e6-859b-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:49:14Z","name":"Greeen143","shardId":"eu","stats":{"lifetimeGold":12470,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"9d32da64-d966-11e6-824e-06ab1a16f8e5","attributes":{"createdAt":"2017-01-27T20:49:18Z","name":"FeRRuM","shardId":"eu","stats":{"lifetimeGold":11878.75,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"32fd2cc8-dc86-11e4-9cdb-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:49:25Z","name":"KalelThePro256","shardId":"eu","stats":{"lifetimeGold":3692.5,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"ef3bef38-21a8-11e6-9ee7-06388a2f2ea7","attributes":{"createdAt":"2017-01-27T20:49:27Z","name":"Burganyaszelet","shardId":"eu","stats":{"lifetimeGold":9238.875,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d29cd3fc-db3d-11e6-b942-062cb73cdbb1","attributes":{"createdAt":"2017-01-27T20:49:29Z","name":"SmallpoX","shardId":"eu","stats":{"lifetimeGold":12258.625,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a130939e-de5d-11e6-b53a-06b48b82cd49","attributes":{"createdAt":"2017-01-27T20:49:32Z","name":"OoOkRmInAl","shardId":"eu","stats":{"lifetimeGold":9409.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c0ee55c6-7500-11e5-b054-06b48b82cd49","attributes":{"createdAt":"2017-01-27T20:49:34Z","name":"elmoks","shardId":"eu","stats":{"lifetimeGold":12610.5,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"65ce1268-e2e0-11e6-8dc4-06fc87f1dd11","attributes":{"createdAt":"2017-01-27T20:49:35Z","name":"GAPA7996","shardId":"eu","stats":{"lifetimeGold":10856.75,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"de4f8220-decc-11e6-8a7f-06ab1a16f8e5","attributes":{"createdAt":"2017-01-27T20:49:40Z","name":"Guest_443158589","shardId":"eu","stats":{"lifetimeGold":6790,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"49759254-e34d-11e6-9dcd-06ab1a16f8e5","attributes":{"createdAt":"2017-01-27T20:49:40Z","name":"Guest_722374194","shardId":"eu","stats":{"lifetimeGold":7060,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"14e06998-7f65-11e6-831c-06388a2f2ea7","attributes":{"createdAt":"2017-01-27T20:49:40Z","name":"DunMorog","shardId":"eu","stats":{"lifetimeGold":9588.5,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d86fbfd6-e387-11e6-aed8-06a9175d25fa","attributes":{"createdAt":"2017-01-27T20:49:42Z","name":"Guest_525174341","shardId":"eu","stats":{"lifetimeGold":16061.25,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a6ea634e-e09e-11e6-9007-06c5ee41a4a5","attributes":{"createdAt":"2017-01-27T20:49:47Z","name":"IloveSasha","shardId":"eu","stats":{"lifetimeGold":11947.375,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"7eaea9a8-df36-11e6-a884-06ab1a16f8e5","attributes":{"createdAt":"2017-01-27T20:49:47Z","name":"komando1903","shardId":"eu","stats":{"lifetimeGold":7594.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"679620de-bbfa-11e6-af1a-06ab1a16f8e5","attributes":{"createdAt":"2017-01-27T20:49:48Z","name":"nizkiyflex","shardId":"eu","stats":{"lifetimeGold":14085.5,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c8057146-12d1-11e5-bce2-06d90c28bf1a","attributes":{"createdAt":"2017-01-27T20:49:50Z","name":"Wupsen ","shardId":"eu","stats":{"lifetimeGold":9388.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"13a52dce-e0c8-11e6-9388-06388a2f2ea7","attributes":{"createdAt":"2017-01-27T20:49:50Z","name":"RePLaY95","shardId":"eu","stats":{"lifetimeGold":13403,"lossStreak":5,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5b59579e-9bfe-11e6-9804-06388a2f2ea7","attributes":{"createdAt":"2017-01-27T20:49:50Z","name":"MateriyPrapor","shardId":"eu","stats":{"lifetimeGold":8668.5,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8bf9b356-8955-11e5-a4d3-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:49:52Z","name":"N12G33","shardId":"eu","stats":{"lifetimeGold":8133.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a2efc1c6-70b6-11e4-9d7d-06641bcbf424","attributes":{"createdAt":"2017-01-27T20:49:54Z","name":"snilz","shardId":"eu","stats":{"lifetimeGold":8566.75,"lossStreak":5,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f24f1452-99f9-11e5-815c-06eb725f8a76","attributes":{"createdAt":"2017-01-27T20:49:54Z","name":"UberSoldier","shardId":"eu","stats":{"lifetimeGold":15410.25,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"eda5b760-ed02-11e5-ad74-06c5ee41a4a5","attributes":{"createdAt":"2017-01-27T20:49:55Z","name":"HextingStorm","shardId":"eu","stats":{"lifetimeGold":14032.625,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"98e22444-6c3d-11e4-822b-062d0b175276","attributes":{"createdAt":"2017-01-27T20:49:57Z","name":"P4inKill3R","shardId":"eu","stats":{"lifetimeGold":7730,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}]}
-    http_version:
-  recorded_at: Tue, 28 Mar 2017 06:28:57 GMT
-- request:
-    method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/sa/players?filter%5BplayerNames%5D=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Ruby
-      Host:
-      - api.dc01.gamelockerapp.com
-      Authorization:
-      - Bearer valid_api_key
-      X-Title-Id:
-      - semc-vainglory
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 28 Mar 2017 06:28:57 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '2024'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      X-Ratelimit-Limit:
-      - '10'
-      X-Ratelimit-Remaining:
-      - '8'
-      X-Ratelimit-Reset:
-      - '11681878000'
-      X-Request-Id:
-      - 1ea10101-361a-4a72-b2cb-4f5848349db1
-      X-Title-Id:
-      - semc-vainglory
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {"data":[{"type":"player","id":"b5b5305a-04cd-11e6-abb2-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:39:07Z","name":"Sergio2199","shardId":"sa","stats":{"lifetimeGold":13899.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5abc5aea-d996-11e6-ba43-067e8bc536fd","attributes":{"createdAt":"2017-02-02T15:39:07Z","name":"juunior","shardId":"sa","stats":{"lifetimeGold":16305.5,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"1e960364-e1ec-11e6-ae6a-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:39:10Z","name":"BRMASTERBR","shardId":"sa","stats":{"lifetimeGold":7996.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"dfedb9c6-ca45-11e6-9d6f-062cb73cdbb1","attributes":{"createdAt":"2017-02-02T15:39:12Z","name":"izacckings","shardId":"sa","stats":{"lifetimeGold":15647.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"520b456e-e738-11e6-8e4f-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:39:12Z","name":"EDKwim","shardId":"sa","stats":{"lifetimeGold":18189.25,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c50126c6-fc05-11e4-bb67-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:39:12Z","name":"Marceloapires","shardId":"sa","stats":{"lifetimeGold":11866.25,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"7423b4c8-e8d8-11e6-b3ef-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:39:16Z","name":"Guest_823226775","shardId":"sa","stats":{"lifetimeGold":12882.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"6c6c59f6-e446-11e6-b9b0-067e8bc536fd","attributes":{"createdAt":"2017-02-02T15:39:16Z","name":"L30n4rd04lm31d4","shardId":"sa","stats":{"lifetimeGold":13812.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4a79dae8-749b-11e4-9fcd-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:39:17Z","name":"Monkeymaster","shardId":"sa","stats":{"lifetimeGold":9491.875,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b03878ea-431f-11e6-8e1d-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:39:17Z","name":"MrTropius","shardId":"sa","stats":{"lifetimeGold":8942.625,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"fce847ec-da0a-11e6-ab9d-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:39:20Z","name":"LeoUltimate","shardId":"sa","stats":{"lifetimeGold":9691.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"38916792-e36b-11e6-9372-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:39:20Z","name":"apakatonikai","shardId":"sa","stats":{"lifetimeGold":9498.5,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0d5f6d94-b968-11e6-b914-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:39:20Z","name":"lokpodysto","shardId":"sa","stats":{"lifetimeGold":14067,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"de0d6728-e74b-11e6-86bd-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:39:22Z","name":"LeGeDaRiO","shardId":"sa","stats":{"lifetimeGold":18720.25,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"17be229e-e72b-11e6-be63-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:39:22Z","name":"Lypjr","shardId":"sa","stats":{"lifetimeGold":13681.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2b065f4c-6ad5-11e6-bba4-062cb73cdbb1","attributes":{"createdAt":"2017-02-02T15:39:23Z","name":"BabyDarkRise","shardId":"sa","stats":{"lifetimeGold":6958.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"82af67ce-cf8a-11e6-a71d-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:39:27Z","name":"Fivan","shardId":"sa","stats":{"lifetimeGold":17460.5,"lossStreak":0,"winStreak":6},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d2c5f60e-b97a-11e6-ab87-06fc87f1dd11","attributes":{"createdAt":"2017-02-02T15:39:30Z","name":"tupacman","shardId":"sa","stats":{"lifetimeGold":14209.5,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a2e349ae-e72f-11e6-972f-06a9175d25fa","attributes":{"createdAt":"2017-02-02T15:39:34Z","name":"abcnorte","shardId":"sa","stats":{"lifetimeGold":10722.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2a3ba26c-9b3b-11e5-bdc8-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:39:43Z","name":"one379","shardId":"sa","stats":{"lifetimeGold":1505,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"7f40c5dc-c7cb-11e5-9883-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T15:39:45Z","name":"Bielocouto97","shardId":"sa","stats":{"lifetimeGold":9049.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8dbda214-9fa8-11e6-9f32-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:39:50Z","name":"ADCARYPOWER","shardId":"sa","stats":{"lifetimeGold":14913.25,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"400fdd96-e898-11e6-9f15-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:39:54Z","name":"Guest_238916527","shardId":"sa","stats":{"lifetimeGold":14839.5,"lossStreak":0,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"69b6a906-e69d-11e6-9cfb-06a9175d25fa","attributes":{"createdAt":"2017-02-02T15:39:56Z","name":"KenzakiFH","shardId":"sa","stats":{"lifetimeGold":11892.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a4822b9e-8b41-11e6-9c82-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:39:57Z","name":"WarlikeZ","shardId":"sa","stats":{"lifetimeGold":11857.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b3ab7840-7850-11e6-915a-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:40:00Z","name":"RaiPalmito","shardId":"sa","stats":{"lifetimeGold":8927.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"e2278f14-e7e1-11e6-83d7-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:40:02Z","name":"luc4oBR","shardId":"sa","stats":{"lifetimeGold":13495,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"37c78b44-bd45-11e6-9167-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:40:05Z","name":"Extermiinador","shardId":"sa","stats":{"lifetimeGold":8562.5,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"26fc727e-de75-11e6-8b70-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:40:05Z","name":"DjalmaPN","shardId":"sa","stats":{"lifetimeGold":11699.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"57df010a-caf6-11e6-a006-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:40:05Z","name":"XFreesh","shardId":"sa","stats":{"lifetimeGold":4667.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c681bfa4-e756-11e6-a662-067e8bc536fd","attributes":{"createdAt":"2017-02-02T15:40:08Z","name":"kayke07","shardId":"sa","stats":{"lifetimeGold":10721,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"026b805a-6b10-11e5-9431-06eb725f8a76","attributes":{"createdAt":"2017-02-02T16:02:08Z","name":"Chin4","shardId":"sa","stats":{"lifetimeGold":6785.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"83b17b60-e891-11e6-9f02-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T16:02:09Z","name":"Guest_643089062","shardId":"sa","stats":{"lifetimeGold":9849.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"bf6e2fcc-fc15-11e5-9bc9-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T16:02:15Z","name":"paolavingadora","shardId":"sa","stats":{"lifetimeGold":20550.75,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0ab79b90-8784-11e6-9483-062cb73cdbb1","attributes":{"createdAt":"2017-02-02T16:02:15Z","name":"Javo18","shardId":"sa","stats":{"lifetimeGold":7773,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"84c2987a-c18d-11e6-8621-06eb725f8a76","attributes":{"createdAt":"2017-02-02T16:02:25Z","name":"vinimnp","shardId":"sa","stats":{"lifetimeGold":11058,"lossStreak":0,"winStreak":6},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"951a6db6-d72c-11e5-b8e6-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T16:02:30Z","name":"Vbarretos","shardId":"sa","stats":{"lifetimeGold":14229.5,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"98fb700a-13c4-11e5-9496-06eb725f8a76","attributes":{"createdAt":"2017-02-02T16:02:35Z","name":"noisyripper","shardId":"sa","stats":{"lifetimeGold":9570.5,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"424649bc-e751-11e6-a52e-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T16:02:37Z","name":"EDWIGES","shardId":"sa","stats":{"lifetimeGold":5846,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2e3d00ec-e8a9-11e6-9e14-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T16:02:37Z","name":"Guest_111615329","shardId":"sa","stats":{"lifetimeGold":8666.25,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"539e3f86-e3f4-11e6-8152-06f4ee369f53","attributes":{"createdAt":"2017-02-02T16:02:39Z","name":"martiiwiix","shardId":"sa","stats":{"lifetimeGold":10048.875,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"1cb77022-e328-11e6-b1c0-06f4ee369f53","attributes":{"createdAt":"2017-02-02T16:02:44Z","name":"Martinnelle","shardId":"sa","stats":{"lifetimeGold":16116,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f2fdc02a-22d3-11e6-a0d2-06f4ee369f53","attributes":{"createdAt":"2017-02-02T16:02:46Z","name":"CeterisParibus1","shardId":"sa","stats":{"lifetimeGold":12502,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b3bf9c6c-e79f-11e6-8873-067e8bc536fd","attributes":{"createdAt":"2017-02-02T16:02:52Z","name":"KevnoPR","shardId":"sa","stats":{"lifetimeGold":11692.5,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"36a2dcf0-c560-11e6-9d15-068789513eb5","attributes":{"createdAt":"2017-02-02T16:02:54Z","name":"petbox333","shardId":"sa","stats":{"lifetimeGold":10974.875,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"6e39547c-c872-11e6-895b-06eb725f8a76","attributes":{"createdAt":"2017-02-02T16:03:00Z","name":"Phooolls","shardId":"sa","stats":{"lifetimeGold":13416.125,"lossStreak":5,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"3e79df5e-e82f-11e6-b3ef-06f4ee369f53","attributes":{"createdAt":"2017-02-02T16:03:00Z","name":"Redockz","shardId":"sa","stats":{"lifetimeGold":11969.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8a43ec1e-d055-11e6-9708-06a9175d25fa","attributes":{"createdAt":"2017-02-02T16:03:03Z","name":"SoTank","shardId":"sa","stats":{"lifetimeGold":10325.75,"lossStreak":6,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8360943e-d68a-11e6-95d2-06f4ee369f53","attributes":{"createdAt":"2017-02-02T16:03:03Z","name":"izzegolem","shardId":"sa","stats":{"lifetimeGold":9036.125,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"e18cbbd0-d736-11e6-b082-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T16:03:03Z","name":"gero10","shardId":"sa","stats":{"lifetimeGold":9550.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}]}
-    http_version:
-  recorded_at: Tue, 28 Mar 2017 06:28:57 GMT
-- request:
-    method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/ea/players?filter%5BplayerNames%5D=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Ruby
-      Host:
-      - api.dc01.gamelockerapp.com
-      Authorization:
-      - Bearer valid_api_key
-      X-Title-Id:
-      - semc-vainglory
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 28 Mar 2017 06:28:57 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '1987'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      X-Ratelimit-Limit:
-      - '10'
-      X-Ratelimit-Remaining:
-      - '7'
-      X-Ratelimit-Reset:
-      - '17406342000'
-      X-Request-Id:
-      - bcf560a8-3ca5-45c0-a05f-0777a8d047d8
-      X-Title-Id:
-      - semc-vainglory
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {"data":[{"type":"player","id":"29a2e412-eb75-11e4-a5a0-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:41:31Z","name":"parkop07","shardId":"ea","stats":{"lifetimeGold":11014.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"6b6c74c6-d3eb-11e5-8ec9-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T15:41:31Z","name":"SALSANG","shardId":"ea","stats":{"lifetimeGold":9435.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b12be3b2-b351-11e5-bd0c-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:41:31Z","name":"APosl","shardId":"ea","stats":{"lifetimeGold":7910,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"eebe7f8c-e3cf-11e6-a984-067e8bc536fd","attributes":{"createdAt":"2017-02-02T15:41:36Z","name":"takkunver2","shardId":"ea","stats":{"lifetimeGold":6655,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c9247ab8-e7cd-11e6-a911-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:41:43Z","name":"BimaPR","shardId":"ea","stats":{"lifetimeGold":12594.375,"lossStreak":5,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"dcc0089e-402a-11e6-863a-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:41:43Z","name":"RogIc","shardId":"ea","stats":{"lifetimeGold":12306,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"ca664a04-ba7a-11e5-97d0-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:41:48Z","name":"GNL1","shardId":"ea","stats":{"lifetimeGold":12540.375,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"6707075a-4af9-11e5-9618-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T15:41:51Z","name":"dlwogk","shardId":"ea","stats":{"lifetimeGold":16087.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"50feae88-e7a6-11e4-8481-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:42:03Z","name":"mnb","shardId":"ea","stats":{"lifetimeGold":1600,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5e5461f2-b1a0-11e6-94bd-06a9175d25fa","attributes":{"createdAt":"2017-02-02T15:42:06Z","name":"HOOD0078","shardId":"ea","stats":{"lifetimeGold":12279.75,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"26f38494-9fe6-11e5-a2e0-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:42:15Z","name":"iwasa04","shardId":"ea","stats":{"lifetimeGold":13680.375,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"67c10c5c-238c-11e5-ad66-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:42:26Z","name":"ShadowNightH","shardId":"ea","stats":{"lifetimeGold":10851.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d7883f8a-8635-11e6-89d9-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:42:28Z","name":"umeyugo1030","shardId":"ea","stats":{"lifetimeGold":11024.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a97b17a6-230d-11e6-8c53-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:42:34Z","name":"vaynesenpai","shardId":"ea","stats":{"lifetimeGold":11662.875,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"cafdba80-498a-11e5-83d5-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T15:42:39Z","name":"Dalam","shardId":"ea","stats":{"lifetimeGold":7032,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"7adc412a-04d9-11e5-ac48-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:42:41Z","name":"Maruchi82","shardId":"ea","stats":{"lifetimeGold":13427.25,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"93d65e7c-7095-11e5-aa0d-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:43:01Z","name":"muttun2","shardId":"ea","stats":{"lifetimeGold":11690.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"79b78dda-be7e-11e6-9315-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:43:01Z","name":"Turun420","shardId":"ea","stats":{"lifetimeGold":8643.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"701abe98-d0ec-11e6-895b-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:43:10Z","name":"adfzxcv","shardId":"ea","stats":{"lifetimeGold":11556,"lossStreak":0,"winStreak":5},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4a3dab78-0ee5-11e6-93c6-062cb73cdbb1","attributes":{"createdAt":"2017-02-02T15:43:14Z","name":"KORjh","shardId":"ea","stats":{"lifetimeGold":10847.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"cc42164a-33ca-11e6-a323-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:43:14Z","name":"KimSH1807","shardId":"ea","stats":{"lifetimeGold":13876,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"9fdd6e4e-e8ae-11e6-b90b-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:43:17Z","name":"MeruemXacE","shardId":"ea","stats":{"lifetimeGold":11013.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5104b8e8-e847-11e6-8027-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:43:17Z","name":"binsung","shardId":"ea","stats":{"lifetimeGold":10699.5,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a44461f4-e900-11e4-b0d5-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:43:17Z","name":"nikomaki25","shardId":"ea","stats":{"lifetimeGold":9496.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"9820f768-e794-11e6-a7c3-068789513eb5","attributes":{"createdAt":"2017-02-02T15:43:20Z","name":"Guest_586703169","shardId":"ea","stats":{"lifetimeGold":12564.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0ca4fb20-71f7-11e6-afc5-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:43:24Z","name":"S0ftCream","shardId":"ea","stats":{"lifetimeGold":14748,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"083e0724-dfff-11e4-903b-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:43:31Z","name":"BestAid","shardId":"ea","stats":{"lifetimeGold":18645.125,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d3aec8fa-ee66-11e5-8eea-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:43:38Z","name":"Peenoise101","shardId":"ea","stats":{"lifetimeGold":6140,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b5517f96-d7dc-11e6-bda8-062cb73cdbb1","attributes":{"createdAt":"2017-02-02T15:43:48Z","name":"yukeru","shardId":"ea","stats":{"lifetimeGold":11964.25,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0989d736-99f6-11e6-b9bf-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:43:50Z","name":"Ilovedva","shardId":"ea","stats":{"lifetimeGold":9967.5,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b0e4dfac-2c3d-11e6-9d0d-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T15:43:51Z","name":"peterkate","shardId":"ea","stats":{"lifetimeGold":15615.375,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"cb255ba6-bc55-11e5-824c-068789513eb5","attributes":{"createdAt":"2017-02-02T15:43:51Z","name":"grapenim","shardId":"ea","stats":{"lifetimeGold":8975,"lossStreak":5,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"02953062-0962-11e6-94f6-068789513eb5","attributes":{"createdAt":"2017-02-02T15:43:57Z","name":"blackeye2","shardId":"ea","stats":{"lifetimeGold":14756.375,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"69d27502-e943-11e6-a0e5-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:43:57Z","name":"GuguDao","shardId":"ea","stats":{"lifetimeGold":11261.041015625,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"070bddf6-74b8-11e5-9ef2-068789513eb5","attributes":{"createdAt":"2017-02-02T15:43:59Z","name":"Donguk27","shardId":"ea","stats":{"lifetimeGold":10460,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c6cd596c-e87a-11e6-8bec-068789513eb5","attributes":{"createdAt":"2017-02-02T15:43:59Z","name":"gorebop11","shardId":"ea","stats":{"lifetimeGold":9929.25,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"557d7cde-2c78-11e5-85e3-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:44:02Z","name":"Delons","shardId":"ea","stats":{"lifetimeGold":10460,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4d2d8c94-5c17-11e5-b3d9-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:44:12Z","name":"HankLin112","shardId":"ea","stats":{"lifetimeGold":16490,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5c714758-e551-11e6-8792-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:44:12Z","name":"Guest_395384392","shardId":"ea","stats":{"lifetimeGold":11301.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"871a2230-2708-11e5-afdc-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:44:15Z","name":"pigman112232","shardId":"ea","stats":{"lifetimeGold":6955.25,"lossStreak":7,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"bb3a68b2-ecc1-11e4-a496-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:44:18Z","name":"minjunGOD","shardId":"ea","stats":{"lifetimeGold":19363.625,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"ec38cbe8-eda7-11e4-8a27-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:44:18Z","name":"Gestalt","shardId":"ea","stats":{"lifetimeGold":14385.25,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8847b2aa-def7-11e6-a984-067e8bc536fd","attributes":{"createdAt":"2017-02-02T15:44:20Z","name":"unene","shardId":"ea","stats":{"lifetimeGold":5741.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"95ccb26a-e44a-11e6-8817-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:44:28Z","name":"yosidaniki","shardId":"ea","stats":{"lifetimeGold":10314.625,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"ea464dbc-e231-11e6-ba67-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:44:34Z","name":"yusukeburiririri","shardId":"ea","stats":{"lifetimeGold":7228.5,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"d4a52b26-defe-11e6-8d60-06a9175d25fa","attributes":{"createdAt":"2017-02-02T15:44:43Z","name":"Guest_087111006","shardId":"ea","stats":{"lifetimeGold":11063,"lossStreak":0,"winStreak":5},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8edf142a-e454-11e6-9908-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:44:43Z","name":"ImARTMAN","shardId":"ea","stats":{"lifetimeGold":7856.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"16bf519c-271a-11e5-a35a-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:44:44Z","name":"dlwjddn124","shardId":"ea","stats":{"lifetimeGold":13639,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a1454d1e-545e-11e5-8223-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:44:45Z","name":"kojinss","shardId":"ea","stats":{"lifetimeGold":11124.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"267706dc-21a4-11e5-8a7c-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:44:47Z","name":"OminiO","shardId":"ea","stats":{"lifetimeGold":3480,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}]}
-    http_version:
-  recorded_at: Tue, 28 Mar 2017 06:28:57 GMT
-- request:
-    method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/sg/players?filter%5BplayerNames%5D=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Ruby
-      Host:
-      - api.dc01.gamelockerapp.com
-      Authorization:
-      - Bearer valid_api_key
-      X-Title-Id:
-      - semc-vainglory
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 28 Mar 2017 06:28:57 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '2042'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      X-Ratelimit-Limit:
-      - '10'
-      X-Ratelimit-Remaining:
-      - '6'
-      X-Ratelimit-Reset:
-      - '23132094000'
-      X-Request-Id:
-      - 96cff1e6-6a48-41aa-9815-8c88964a10e2
-      X-Title-Id:
-      - semc-vainglory
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        {"data":[{"type":"player","id":"fb6f08c8-4f32-11e6-8d7d-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:33:14Z","name":"screamrapture747","shardId":"sg","stats":{"lifetimeGold":13303.875,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"c6352a7c-b170-11e4-aca8-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:33:14Z","name":"Paversheey","shardId":"sg","stats":{"lifetimeGold":15847,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0a81e662-e5e9-11e6-9210-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:33:16Z","name":"Ravital","shardId":"sg","stats":{"lifetimeGold":10582,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"ea96f396-e364-11e6-b949-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:33:16Z","name":"Guest_036095252","shardId":"sg","stats":{"lifetimeGold":7455.5,"lossStreak":6,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2f511268-d583-11e6-9e66-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:33:19Z","name":"PePin77","shardId":"sg","stats":{"lifetimeGold":14539.625,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2ce2b68a-c52f-11e6-beb7-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:33:20Z","name":"leventj123","shardId":"sg","stats":{"lifetimeGold":4982,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a7fec166-ed8e-11e5-aa97-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:33:20Z","name":"jens051","shardId":"sg","stats":{"lifetimeGold":4761.25,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4075c1b8-55d9-11e5-9a0a-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T15:33:21Z","name":"huutien2003","shardId":"sg","stats":{"lifetimeGold":11876,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b2ccf990-3e61-11e6-9ace-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:33:25Z","name":"SexyBoi","shardId":"sg","stats":{"lifetimeGold":13158,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"dbf82dfa-e625-11e6-b824-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:33:30Z","name":"MyNameJackFrtost","shardId":"sg","stats":{"lifetimeGold":13928.75,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"1073324a-d673-11e6-bf7c-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:33:30Z","name":"BallxDav","shardId":"sg","stats":{"lifetimeGold":10122.125,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"45c360e0-d886-11e6-966f-062cb73cdbb1","attributes":{"createdAt":"2017-02-02T15:33:31Z","name":"Cloxia","shardId":"sg","stats":{"lifetimeGold":12283.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"45a47374-25a3-11e6-b810-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:33:32Z","name":"1stDragon97","shardId":"sg","stats":{"lifetimeGold":10798.5,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"fc8df90c-9236-11e6-af64-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:33:33Z","name":"syahpedon","shardId":"sg","stats":{"lifetimeGold":8642.5419921875,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0f61badc-d0cb-11e6-b077-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:33:35Z","name":"Aculiet","shardId":"sg","stats":{"lifetimeGold":10679,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5c70e5bc-6a25-11e6-9e90-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:33:36Z","name":"Solikinkun","shardId":"sg","stats":{"lifetimeGold":7267.5,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"00477f1c-bac5-11e6-81f8-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:33:45Z","name":"evilsugarr","shardId":"sg","stats":{"lifetimeGold":14257.75,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"3d6f1cb6-dea5-11e6-b2cd-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:33:47Z","name":"Ngarbs","shardId":"sg","stats":{"lifetimeGold":16948.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"edb2e028-ddef-11e6-bf59-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:33:47Z","name":"HEANG271712","shardId":"sg","stats":{"lifetimeGold":13758,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5602acac-8690-11e5-a9cb-068789513eb5","attributes":{"createdAt":"2017-02-02T15:33:47Z","name":"RizqyarV","shardId":"sg","stats":{"lifetimeGold":5294.25,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"56ebc4f2-e06f-11e6-ad99-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:33:48Z","name":"SlowlY","shardId":"sg","stats":{"lifetimeGold":11614.25,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"3c33c5ca-e7c1-11e6-9af8-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:33:54Z","name":"hieukfa","shardId":"sg","stats":{"lifetimeGold":11107,"lossStreak":0,"winStreak":7},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"3bb31c8e-b947-11e6-b2b2-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:33:56Z","name":"FakerLMHT","shardId":"sg","stats":{"lifetimeGold":15150.125,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"e0d0fab8-b37c-11e6-a7ce-06a9175d25fa","attributes":{"createdAt":"2017-02-02T15:33:59Z","name":"aASA23","shardId":"sg","stats":{"lifetimeGold":12399.125,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"e53a122c-646f-11e5-b9b7-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:33:59Z","name":"kjbo1","shardId":"sg","stats":{"lifetimeGold":12522.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4c6e444c-8001-11e6-b116-062cb73cdbb1","attributes":{"createdAt":"2017-02-02T15:34:00Z","name":"TuannIs","shardId":"sg","stats":{"lifetimeGold":13265.875,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"60e4b314-a313-11e5-9d52-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:34:02Z","name":"RqoPro","shardId":"sg","stats":{"lifetimeGold":10096.25,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"fb3a4bbe-cdd7-11e6-80b2-06fc87f1dd11","attributes":{"createdAt":"2017-02-02T15:34:05Z","name":"d38","shardId":"sg","stats":{"lifetimeGold":13922.125,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5be240f8-e2b3-11e6-ac8f-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:34:12Z","name":"JyCw","shardId":"sg","stats":{"lifetimeGold":8930.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"f62702c8-0e9a-11e5-9496-06d90c28bf1a","attributes":{"createdAt":"2017-02-02T15:34:15Z","name":"Limito","shardId":"sg","stats":{"lifetimeGold":11925.875,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"b6882bec-8083-11e4-8a20-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:34:16Z","name":"GebuhTheGreat","shardId":"sg","stats":{"lifetimeGold":11621.25,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a8edd454-e60d-11e6-b4c9-06fc87f1dd11","attributes":{"createdAt":"2017-02-02T15:34:19Z","name":"DarkForce28","shardId":"sg","stats":{"lifetimeGold":9932.75,"lossStreak":3,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"64006a3a-ad16-11e6-8261-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:34:20Z","name":"FauzanArkan","shardId":"sg","stats":{"lifetimeGold":11114.875,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"307620a2-cdef-11e6-96b0-06ab1a16f8e5","attributes":{"createdAt":"2017-02-02T15:34:20Z","name":"pin404","shardId":"sg","stats":{"lifetimeGold":16202.875,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"bcb96a80-ac14-11e6-ba55-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:34:21Z","name":"slickysick","shardId":"sg","stats":{"lifetimeGold":8579.25,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"2805cf6e-95be-11e4-8243-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:34:22Z","name":"LooT","shardId":"sg","stats":{"lifetimeGold":9156,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"5719c3b0-821b-11e5-a952-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:34:23Z","name":"Sephyria","shardId":"sg","stats":{"lifetimeGold":15254.25,"lossStreak":2,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"58311046-5df8-11e6-89bc-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:34:23Z","name":"trinhduyphuoc","shardId":"sg","stats":{"lifetimeGold":15195,"lossStreak":4,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"1200f3c0-6e83-11e6-b98c-06c5ee41a4a5","attributes":{"createdAt":"2017-02-02T15:34:24Z","name":"SoreyZephyr","shardId":"sg","stats":{"lifetimeGold":11352.625,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"0f690a88-e914-11e6-95dd-06fc87f1dd11","attributes":{"createdAt":"2017-02-02T15:34:26Z","name":"CheeKhang1023","shardId":"sg","stats":{"lifetimeGold":11940.75,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"df8a0f9c-cd57-11e6-9699-06b48b82cd49","attributes":{"createdAt":"2017-02-02T15:34:26Z","name":"Zuzuu","shardId":"sg","stats":{"lifetimeGold":14484,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"8a0d661e-e890-11e6-9cd8-067e8bc536fd","attributes":{"createdAt":"2017-02-02T15:34:26Z","name":"CaoCibaiGM","shardId":"sg","stats":{"lifetimeGold":11968,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"3a775e12-911e-11e6-ad0d-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:34:29Z","name":"OGE13","shardId":"sg","stats":{"lifetimeGold":8695.75,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"21822b56-787b-11e5-8186-06f4ee369f53","attributes":{"createdAt":"2017-02-02T15:34:30Z","name":"Babyhippo","shardId":"sg","stats":{"lifetimeGold":11954,"lossStreak":0,"winStreak":4},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"4631fa42-fe29-11e5-9620-0628b69bf6d1","attributes":{"createdAt":"2017-02-02T15:34:35Z","name":"XWoodX","shardId":"sg","stats":{"lifetimeGold":11260.625,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"190b248e-ac76-11e6-b3d1-06388a2f2ea7","attributes":{"createdAt":"2017-02-02T15:34:37Z","name":"NoiDauMinhAnh","shardId":"sg","stats":{"lifetimeGold":9707,"lossStreak":0,"winStreak":2},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"70a6558e-4c71-11e6-8aea-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:34:37Z","name":"Frankenstein22","shardId":"sg","stats":{"lifetimeGold":7437.5,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"95cfa010-242e-11e6-97f9-068789513eb5","attributes":{"createdAt":"2017-02-02T15:34:37Z","name":"MrKidshine","shardId":"sg","stats":{"lifetimeGold":6649,"lossStreak":1,"winStreak":0},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"51f0382c-e176-11e6-82b3-06eb725f8a76","attributes":{"createdAt":"2017-02-02T15:34:40Z","name":"BlackshadowS","shardId":"sg","stats":{"lifetimeGold":8871.5,"lossStreak":0,"winStreak":1},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"dbe3bba2-e523-11e6-98b1-068789513eb5","attributes":{"createdAt":"2017-02-02T15:34:40Z","name":"Fitoroses","shardId":"sg","stats":{"lifetimeGold":8413.875,"lossStreak":0,"winStreak":3},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}]}
-    http_version:
-  recorded_at: Tue, 28 Mar 2017 06:28:57 GMT
+  recorded_at: Fri, 26 May 2017 19:46:04 GMT
 recorded_with: VCR 3.0.3
