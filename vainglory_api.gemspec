@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.0'
 
-  s.add_development_dependency 'webmock', '~> 3.3'
+  s.add_development_dependency 'webmock', '~> 2.3'
   s.add_development_dependency 'vcr', '~> 3.0'
   s.add_development_dependency 'rspec', '~> 3.5'
   s.add_development_dependency 'simplecov', '~> 0.14'
