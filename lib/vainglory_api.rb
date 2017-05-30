@@ -97,6 +97,7 @@ class VaingloryAPI
     response_object = serialize_response_data(response_data.body)
     metadata        = serialize_response_metadata(response_data)
 
+    # Add metadata members to response_object
     metadata.each do |k, v|
       response_object[k] = v
     end
