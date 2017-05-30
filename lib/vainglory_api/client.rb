@@ -69,7 +69,7 @@ module VaingloryAPI
 
     def apply_headers(req, with_auth = true)
       req['Authorization'] = "Bearer #{@api_key}" if with_auth
-      req['X-TITLE-ID'] =
+      req['X-TITLE-ID'] = 'semc-vainglory'
       req['Accept'] = 'application/vnd.api+json'
 
       req
