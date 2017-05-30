@@ -3,6 +3,7 @@
 [![Travis CI](https://travis-ci.org/cbortz/vainglory-api-ruby.svg?branch=master)](https://travis-ci.org/cbortz/vainglory-api-ruby)
 [![Code Climate](https://codeclimate.com/github/cbortz/vainglory-api-ruby/badges/gpa.svg)](https://codeclimate.com/github/cbortz/vainglory-api-ruby)
 [![Test Coverage](https://codeclimate.com/github/cbortz/vainglory-api-ruby/badges/coverage.svg)](https://codeclimate.com/github/cbortz/vainglory-api-ruby/coverage)
+[![Inline docs](http://inch-ci.org/github/cbortz/vainglory-api-ruby.svg?branch=master)](http://inch-ci.org/github/cbortz/vainglory-api-ruby)
 
 ## Getting Started
 
