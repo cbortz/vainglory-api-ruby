@@ -8,6 +8,14 @@ module VaingloryAPI
     # The base URL used for *most* requests
     BASE_URL = 'https://api.dc01.gamelockerapp.com'.freeze
 
+    # A new instance of Client.
+    #
+    # @param (String) api_key your Vainglory API key
+    # @param (String) region the short name for your specified Region shard
+    # @example Initialize a new client
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #
+    # @return [Client] a new instance of the client
     def initialize(api_key, region = 'na')
       @api_key = api_key
       @region = region
@@ -15,7 +23,11 @@ module VaingloryAPI
 
     # Gets batches of random match data
     #
-    # @param [Hash] filter_params the parameters used to filter results (optional)
+    # @param [Hash] filter_params the parameters used to filter results
+    # @example Get samples
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.samples
+    #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#samples
     def samples(filter_params = {})
@@ -24,7 +36,14 @@ module VaingloryAPI
 
     # Gets data from matches (multiple)
     #
-    # @param [Hash] filter_params the parameters used to filter results (optional)
+    # @param [Hash] filter_params the parameters used to filter results
+    # @example Get matches
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.matches
+    # @example Get matches with a filter
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.matches('filter[playerNames]' => 'player_name')
+    #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#participants
     def matches(filter_params = {})
@@ -34,6 +53,10 @@ module VaingloryAPI
     # Gets data for a single match
     #
     # @param [String] match_id the ID of the requested match
+    # @example Get a single match
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.match('MATCH_ID')
+    #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-single-match
     def match(match_id)
@@ -44,6 +67,13 @@ module VaingloryAPI
     #
     # @param [String] player_name the in-game name (IGN) of a player
     # @param [String] additional_player_names additional IGNs for search for
+    # @example Search for a player
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.players('player_name')
+    # @example Search for multiple players
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.players('player_name', 'player_name2')
+    #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-collection-of-players
     def players(player_name, *additional_player_names)
@@ -55,6 +85,10 @@ module VaingloryAPI
     # Gets data for a single player
     #
     # @param [String] player_id the ID of the requested player
+    # @example Get a single player
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.match('PLAYER_ID')
+    #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-single-player
     def player(player_id)
@@ -64,6 +98,10 @@ module VaingloryAPI
     # Gets telemtry data from a specified URL
     #
     # @param [String] url the URL of the requested Telemetry data
+    # @example Get telemetry data
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.telemetry('TELEMETRY_URL')
+    #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#telemetry
     def telemetry(url)
@@ -94,6 +132,10 @@ module VaingloryAPI
     end
 
     # Gets current API version and release date
+    #
+    # @example Get the API's status information
+    #   client = VaingloryAPI::Client.new('API_KEY', 'na')
+    #   client.status
     #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#versioning
