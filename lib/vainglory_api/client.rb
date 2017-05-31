@@ -96,7 +96,7 @@ module VaingloryAPI
     # Gets current API version and release date
     #
     # @return [OpenStruct] the response and metadata
-    # @see
+    # @see https://developer.vainglorygame.com/docs#versioning
     def status
       get_request_without_headers(endpoint_uri('status'))
     end
