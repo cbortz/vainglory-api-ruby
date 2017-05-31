@@ -10,7 +10,6 @@ module VaingloryAPI
   #   @param api_key (String) your Vainglory API key
   #   @param region (String) the short name for your specified Region shard
   # @param (see VaingloryAPI::Client#initialize)
-  # @param (see VaingloryAPI::Client#initialize)
   # @example Initialize a new client
   #   client = VaingloryAPI.new('API_KEY', 'na')
   # @return [VaingloryAPI::Client] an instance of the client
