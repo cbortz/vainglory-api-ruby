@@ -5,9 +5,18 @@
 [![Test Coverage](https://codeclimate.com/github/cbortz/vainglory-api-ruby/badges/coverage.svg)](https://codeclimate.com/github/cbortz/vainglory-api-ruby/coverage)
 [![Inline docs](http://inch-ci.org/github/cbortz/vainglory-api-ruby.svg?branch=master)](http://inch-ci.org/github/cbortz/vainglory-api-ruby)
 
+- [YARD Documentation](http://www.rubydoc.info/github/cbortz/vainglory-api-ruby)
+- [Official Vainglory API Documentation](https://developer.vainglorygame.com/docs)
+
+---
+
 ## Getting Started
 
-VaingloryAPI works with Ruby 2.0 onwards. You can add it to your Gemfile with:
+VaingloryAPI works with Ruby 2.0 onwards. Please refer to the [YARD Documentation](http://www.rubydoc.info/github/cbortz/vainglory-api-ruby) for a better understanding of how everything works.
+
+### Installation
+
+You can add it to your Gemfile with:
 
 ```ruby
 gem 'vainglory-api'
