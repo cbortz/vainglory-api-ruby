@@ -1,11 +1,15 @@
 require 'vainglory_api/client'
 
-# Used to interface with the official Vainglory API
+# A Ruby libary wrapper for the Vainglory API
 #
-# @see https://developer.vainglorygame.com/docs
+# @author Chet Bortz
 module VaingloryAPI
   # Alias for VaingloryAPI::Client constructor
   #
+  # @overload new(api_key, region)
+  #   @param api_key (String) your Vainglory API key
+  #   @param region (String) the short name for your specified Region shard
+  # @param (see VaingloryAPI::Client#initialize)
   # @param (see VaingloryAPI::Client#initialize)
   # @example Initialize a new client
   #   client = VaingloryAPI.new('API_KEY', 'na')

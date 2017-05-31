@@ -4,8 +4,13 @@ require 'openssl'
 require 'net/http'
 
 module VaingloryAPI
+  # Used to interface with the official Vainglory API
+  #
+  # @see https://developer.vainglorygame.com/docs Vainglory API Documentation
+  # @see https://developer.vainglorygame.com/docs#payload Vainglory API "Payload"
+  # @see https://developer.vainglorygame.com/docs#rate-limits Vainglory API "Rate Limits"
   class Client
-    # The base URL used for *most* requests
+    # The base URL used for most requests
     BASE_URL = 'https://api.dc01.gamelockerapp.com'.freeze
 
     # A new instance of Client.
@@ -14,7 +19,6 @@ module VaingloryAPI
     # @param (String) region the short name for your specified Region shard
     # @example Initialize a new client
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
-    #
     # @return [Client] a new instance of the client
     def initialize(api_key, region = 'na')
       @api_key = api_key
@@ -24,12 +28,18 @@ module VaingloryAPI
     # Gets batches of random match data
     #
     # @param [Hash] filter_params the parameters used to filter results
+    # @option filter_params [String] 'page[offset]' (0) Allows paging over results
+    # @option filter_params [String] 'page[limit]' (50) Values less than 50 and great than 2 are supported.
+    # @option filter_params [String] 'sort' (createdAt) By default, Matches are sorted by creation time ascending.
+    # @option filter_params [String] 'filter[createdAt-start]' (3hrs ago)  Must occur before end time. Format is iso8601
+    # @option filter_params [String] 'filter[createdAt-end]' (Now) Queries search the last 3 hrs. Format is iso8601
     # @example Get samples
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.samples
-    #
     # @return [OpenStruct] the response and metadata
-    # @see https://developer.vainglorygame.com/docs#samples
+    # @see https://developer.vainglorygame.com/docs#samples Vainglory API "Samples"
+    # @see https://developer.vainglorygame.com/docs#pagination Vainglory API "Pagination"
+    # @see https://developer.vainglorygame.com/docs#sorting Vainglory API "Sorting"
     def samples(filter_params = {})
       get_request(endpoint_uri("shards/#{@region}/samples", filter_params))
     end
@@ -37,28 +47,41 @@ module VaingloryAPI
     # Gets data from matches (multiple)
     #
     # @param [Hash] filter_params the parameters used to filter results
+    # @option filter_params [String] 'page[offset]' (0) Allows paging over results
+    # @option filter_params [String] 'page[limit]' (50) Values less than 50 and great than 2 are supported.
+    # @option filter_params [String] 'sort' (createdAt) By default, Matches are sorted by creation time ascending.
+    # @option filter_params [String] 'filter[createdAt-start]' (3hrs ago)  Must occur before end time. Format is iso8601
+    # @option filter_params [String] 'filter[createdAt-end]' (Now) Queries search the last 3 hrs. Format is iso8601
+    # @option filter_params [String] 'filter[playerNames]' Filters by player name, separated by commas.
+    # @option filter_params [String] 'filter[playerIds]' Filters by player Id, separated by commas.
+    # @option filter_params [String] 'filter[teamNames]' Filters by team names. Team names are the same as the in game team tags.
+    # @option filter_params [String] 'filter[gameMode]' Filters by Game Mode
     # @example Get matches
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.matches
     # @example Get matches with a filter
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.matches('filter[playerNames]' => 'player_name')
-    #
     # @return [OpenStruct] the response and metadata
-    # @see https://developer.vainglorygame.com/docs#participants
+    # @see https://developer.vainglorygame.com/docs#get-a-collection-of-matches Vainglory API "Get a collection of Matches"
+    # @see https://developer.vainglorygame.com/docs#rosters Vainglory API "Rosters"
+    # @see https://developer.vainglorygame.com/docs#match-data-summary Vainglory API "Match Data Summary"
+    # @see https://developer.vainglorygame.com/docs#pagination Vainglory API "Pagination"
+    # @see https://developer.vainglorygame.com/docs#sorting Vainglory API "Sorting"
     def matches(filter_params = {})
       get_request(endpoint_uri("shards/#{@region}/matches", filter_params))
     end
 
     # Gets data for a single match
-    #
     # @param [String] match_id the ID of the requested match
     # @example Get a single match
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.match('MATCH_ID')
     #
     # @return [OpenStruct] the response and metadata
-    # @see https://developer.vainglorygame.com/docs#get-a-single-match
+    # @see https://developer.vainglorygame.com/docs#get-a-single-match Vainglory API "Get a single Match"
+    # @see https://developer.vainglorygame.com/docs#rosters Vainglory API "Rosters"
+    # @see https://developer.vainglorygame.com/docs#match-data-summary Vainglory API "Match Data Summary"
     def match(match_id)
       get_request(endpoint_uri("shards/#{@region}/matches/#{match_id}"))
     end
@@ -73,9 +96,8 @@ module VaingloryAPI
     # @example Search for multiple players
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.players('player_name', 'player_name2')
-    #
     # @return [OpenStruct] the response and metadata
-    # @see https://developer.vainglorygame.com/docs#get-a-collection-of-players
+    # @see https://developer.vainglorygame.com/docs#get-a-collection-of-players Vainglory API "Get a collection of players"
     def players(player_name, *additional_player_names)
       player_names = [player_name].concat(additional_player_names)
       filter_params = { 'filter[playerNames]' => player_names.join(',') }
@@ -88,9 +110,8 @@ module VaingloryAPI
     # @example Get a single player
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.match('PLAYER_ID')
-    #
     # @return [OpenStruct] the response and metadata
-    # @see https://developer.vainglorygame.com/docs#get-a-single-player
+    # @see https://developer.vainglorygame.com/docs#get-a-single-player Vainglory API "Get a single Player"
     def player(player_id)
       get_request(endpoint_uri("shards/#{@region}/players/#{player_id}"))
     end
@@ -101,17 +122,19 @@ module VaingloryAPI
     # @example Get telemetry data
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.telemetry('TELEMETRY_URL')
-    #
     # @return [OpenStruct] the response and metadata
-    # @see https://developer.vainglorygame.com/docs#telemetry
+    # @see https://developer.vainglorygame.com/docs#telemetry Vainglory API "Telemetry"
     def telemetry(url)
       get_request(URI(url), true, false)
     end
 
     # Gets aggregated lifetime information about teams (multiple)
     #
+    # @param [Hash] _filter_params the parameters used to filter results
+    # @option _filter_params [String] 'filter[teamNames]' Filters by team name
+    # @option _filter_params [String] 'filter[teamIds]' Filters by team ID
     # @raise [NotImplementedError] this endpoint is not yet available
-    # @see https://developer.vainglorygame.com/docs#teams-coming-soon
+    # @see https://developer.vainglorygame.com/docs#teams-coming-soon Vainglory API "Get a collection of Teams"
     def teams(_filter_params = {})
       raise(NotImplementedError, 'Coming soon!')
     end
@@ -119,6 +142,7 @@ module VaingloryAPI
     # Gets aggregated lifetime information about a single team
     #
     # @raise [NotImplementedError] this endpoint is not yet available
+    # @see https://developer.vainglorygame.com/docs#get-a-single-team Vainglory API "Get a single Team"
     def team(_team_id)
       raise(NotImplementedError, 'Coming soon!')
     end
@@ -126,7 +150,7 @@ module VaingloryAPI
     # Checks to see if a link object exists for a given code
     #
     # @raise [NotImplementedError] this endpoint is not yet available
-    # @see https://developer.vainglorygame.com/docs#links-coming-soon
+    # @see https://developer.vainglorygame.com/docs#links-coming-soon Vainglory API "Links"
     def link(_link_id)
       raise(NotImplementedError, 'Coming soon!')
     end
@@ -136,9 +160,8 @@ module VaingloryAPI
     # @example Get the API's status information
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.status
-    #
     # @return [OpenStruct] the response and metadata
-    # @see https://developer.vainglorygame.com/docs#versioning
+    # @see https://developer.vainglorygame.com/docs#versioning Vainglory API "Versioning"
     def status
       get_request_without_headers(endpoint_uri('status'))
     end
