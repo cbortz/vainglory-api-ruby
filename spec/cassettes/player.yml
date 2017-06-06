@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/na/players/a2fe147e-2515-11e5-be61-06d90c28bf1a
+    uri: https://api.dc01.gamelockerapp.com/shards/na/players/12b184cc-21d8-11e5-a63a-06eb725f8a76
     body:
       encoding: US-ASCII
       string: ''
@@ -25,11 +25,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 May 2017 19:46:04 GMT
+      - Tue, 06 Jun 2017 22:11:55 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '347'
+      - '401'
       Connection:
       - keep-alive
       Vary:
@@ -39,15 +39,15 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '1'
       X-Ratelimit-Reset:
-      - '50819970000'
+      - '51702261000'
       X-Request-Id:
-      - b6757a7c-d9b7-4ecb-adaf-a121be561900
+      - db40d304-5903-4494-ae61-85578c938142
       X-Title-Id:
       - semc-vainglory
     body:
       encoding: ASCII-8BIT
       string: |
-        {"data":{"type":"player","id":"a2fe147e-2515-11e5-be61-06d90c28bf1a","attributes":{"createdAt":"2017-05-26T18:00:00Z","name":"Linkosoul","shardId":"na","stats":{"karmaLevel":2,"level":29,"lifetimeGold":23571.25,"lossStreak":0,"played":1244,"played_ranked":1281,"skillTier":1,"winStreak":0,"wins":535,"xp":157764},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},"links":{"self":"https://api.dc01.gamelockerapp.com/shards/na/players/a2fe147e-2515-11e5-be61-06d90c28bf1a"},"meta":{}}
+        {"data":{"type":"player","id":"12b184cc-21d8-11e5-a63a-06eb725f8a76","attributes":{"createdAt":"2017-06-06T19:24:03Z","name":"GrimJaw","shardId":"na","stats":{"elo_earned_season_4":196.22730611005164,"elo_earned_season_5":0,"elo_earned_season_6":196.2167062310048,"elo_earned_season_7":0,"karmaLevel":2,"level":30,"lifetimeGold":15055.3310546875,"lossStreak":0,"played":1164,"played_ranked":2016,"skillTier":1,"winStreak":0,"wins":651,"xp":175450},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},"links":{"self":"https://api.dc01.gamelockerapp.com/shards/na/players/12b184cc-21d8-11e5-a63a-06eb725f8a76"},"meta":{}}
     http_version:
-  recorded_at: Fri, 26 May 2017 19:46:04 GMT
+  recorded_at: Tue, 06 Jun 2017 22:11:55 GMT
 recorded_with: VCR 3.0.3

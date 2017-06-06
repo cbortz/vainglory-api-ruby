@@ -23,11 +23,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - 0XU/MKTk1pfSt6ve59S6JbNTmgywTKmDHy2fb2xIMut7NEOrFaFlO0PgTFxSxZG32ICIAm2Qfwg=
+      - OCXHbq3LRMd028NQkpDIGEDXqkjFumw8LjqlerhOE2oTza/UesusyJJzHBTyBdJuLIG4xOmA3uM=
       X-Amz-Request-Id:
-      - BC424C4C37C24E8F
+      - 15487CF25378FEA9
       Date:
-      - Fri, 26 May 2017 19:46:07 GMT
+      - Tue, 06 Jun 2017 22:11:57 GMT
       Last-Modified:
       - Tue, 28 Mar 2017 03:07:35 GMT
       Etag:
@@ -1136,5 +1136,5 @@ http_interactions:
         { "time": "2017-03-28T03:07:12+0000", "type": "UseAbility", "payload": { "Team": "Right", "Actor": "*Idris*", "Ability": "HERO_ABILITY_IDRIS_B_NAME", "Position": [ 17.83, 0.01, 6.10 ] } }
         ]
     http_version: 
-  recorded_at: Fri, 26 May 2017 19:46:06 GMT
+  recorded_at: Tue, 06 Jun 2017 22:11:56 GMT
 recorded_with: VCR 3.0.3

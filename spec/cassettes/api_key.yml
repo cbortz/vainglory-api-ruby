@@ -25,7 +25,7 @@ http_interactions:
       message: Unauthorized
     headers:
       Date:
-      - Fri, 26 May 2017 19:46:01 GMT
+      - Tue, 06 Jun 2017 22:11:52 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -35,7 +35,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Request-Id:
-      - d16525ed-44e5-477f-ab05-99d1fc7442d9
+      - 9776fd2e-6ac6-4814-83a9-d4f5d342a9c9
       X-Title-Id:
       - semc-vainglory
     body:
@@ -43,5 +43,5 @@ http_interactions:
       string: |
         {"errors":[{"title":"Unauthorized"}]}
     http_version: 
-  recorded_at: Fri, 26 May 2017 19:46:01 GMT
+  recorded_at: Tue, 06 Jun 2017 22:11:52 GMT
 recorded_with: VCR 3.0.3

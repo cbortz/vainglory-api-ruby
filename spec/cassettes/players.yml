@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=Linkosoul,jejearo
+    uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=GrimJaw,Bryangamer
     body:
       encoding: US-ASCII
       string: ''
@@ -25,11 +25,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 May 2017 19:46:04 GMT
+      - Tue, 06 Jun 2017 22:11:54 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '443'
+      - '557'
       Connection:
       - keep-alive
       Vary:
@@ -39,17 +39,17 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '3'
       X-Ratelimit-Reset:
-      - '39650156000'
+      - '40428671000'
       X-Request-Id:
-      - 13724a80-7048-4ab1-aced-a6ba0e1542b5
+      - a3adb748-0544-4ad0-a924-d0c9e3bb7200
       X-Title-Id:
       - semc-vainglory
     body:
       encoding: ASCII-8BIT
       string: |
-        {"data":[{"type":"player","id":"e9bf6cb4-54ef-11e5-8a52-06d90c28bf1a","attributes":{"createdAt":"2017-05-26T17:23:26Z","name":"jejearo","shardId":"na","stats":{"karmaLevel":1,"level":30,"lifetimeGold":15534.25,"lossStreak":0,"played":2141,"played_ranked":3858,"skillTier":-1,"winStreak":0,"wins":2180,"xp":175450},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"a2fe147e-2515-11e5-be61-06d90c28bf1a","attributes":{"createdAt":"2017-05-26T18:00:00Z","name":"Linkosoul","shardId":"na","stats":{"karmaLevel":2,"level":29,"lifetimeGold":23571.25,"lossStreak":0,"played":1244,"played_ranked":1281,"skillTier":1,"winStreak":0,"wins":535,"xp":157764},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}],"links":{"self":"https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=Linkosoul,jejearo"},"meta":{}}
+        {"data":[{"type":"player","id":"12b184cc-21d8-11e5-a63a-06eb725f8a76","attributes":{"createdAt":"2017-06-06T19:24:03Z","name":"GrimJaw","shardId":"na","stats":{"elo_earned_season_4":196.22730611005164,"elo_earned_season_5":0,"elo_earned_season_6":196.2167062310048,"elo_earned_season_7":0,"karmaLevel":2,"level":30,"lifetimeGold":15055.3310546875,"lossStreak":0,"played":1164,"played_ranked":2016,"skillTier":1,"winStreak":0,"wins":651,"xp":175450},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}},{"type":"player","id":"6bbcc0b0-1ece-11e6-a73e-06fc87f1dd11","attributes":{"createdAt":"2017-06-06T19:41:07Z","name":"Bryangamer","shardId":"na","stats":{"elo_earned_season_4":1140.8205134101554,"elo_earned_season_5":1331.2039532066456,"elo_earned_season_6":1297.4319735772247,"elo_earned_season_7":1308.1993564877152,"karmaLevel":1,"level":30,"lifetimeGold":14659.5,"lossStreak":0,"played":1998,"played_ranked":351,"skillTier":13,"winStreak":0,"wins":716,"xp":175450},"titleId":"semc-vainglory"},"relationships":{"assets":{"data":[]}}}],"links":{"self":"https://api.dc01.gamelockerapp.com/shards/na/players?filter[playerNames]=GrimJaw,Bryangamer"},"meta":{}}
     http_version:
-  recorded_at: Fri, 26 May 2017 19:46:03 GMT
+  recorded_at: Tue, 06 Jun 2017 22:11:54 GMT
 - request:
     method: get
     uri: https://api.dc01.gamelockerapp.com/shards/na/players?filter%5BplayerNames%5D=TheRealKrul
@@ -75,7 +75,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 May 2017 19:46:04 GMT
+      - Tue, 06 Jun 2017 22:11:54 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -89,9 +89,9 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '2'
       X-Ratelimit-Reset:
-      - '45380989000'
+      - '45980875000'
       X-Request-Id:
-      - c95d877b-ec3b-437f-b8d2-ac1a440142b8
+      - af314259-feb9-4adb-a718-ac3f88a22986
       X-Title-Id:
       - semc-vainglory
     body:
@@ -99,7 +99,7 @@ http_interactions:
       string: |
         {"errors":[{"title":"Not Found","detail":"criteria: \u0026{ na [TheRealKrul] [] 6 0 0 semc-vainglory}"}]}
     http_version:
-  recorded_at: Fri, 26 May 2017 19:46:04 GMT
+  recorded_at: Tue, 06 Jun 2017 22:11:54 GMT
 - request:
     method: get
     uri: https://api.dc01.gamelockerapp.com/shards/na/players/invalid-id
@@ -125,7 +125,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 26 May 2017 19:46:05 GMT
+      - Tue, 06 Jun 2017 22:11:55 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -139,9 +139,9 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '0'
       X-Ratelimit-Reset:
-      - '56541068000'
+      - '57489045000'
       X-Request-Id:
-      - 7b7733af-fb5c-4ff1-b93d-2ca1bdd0a3ee
+      - 57605544-1556-46c6-a02d-c3f3fd8bc467
       X-Title-Id:
       - semc-vainglory
     body:
@@ -149,5 +149,5 @@ http_interactions:
       string: |
         {"errors":[{"title":"Not Found"}]}
     http_version:
-  recorded_at: Fri, 26 May 2017 19:46:04 GMT
+  recorded_at: Tue, 06 Jun 2017 22:11:55 GMT
 recorded_with: VCR 3.0.3
