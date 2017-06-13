@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name        = 'vainglory-api'
   s.version     = VaingloryAPI::VERSION.dup
   s.platform    = Gem::Platform::RUBY
-  s.date        = '2017-03-28'
+  s.date        = '2017-06-13'
   s.summary     = 'Vainglory API'
   s.description = 'A Ruby libary wrapper for the Vainglory API'
   s.authors     = ['Chet Bortz']
