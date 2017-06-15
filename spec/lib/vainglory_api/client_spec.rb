@@ -1,16 +1,15 @@
 require 'spec_helper'
 
 describe VaingloryAPI::Client, vcr: true do
-  subject(:klass) { Object.const_get(self.class.top_level_description) }
   let(:valid_api_key) { 'valid_api_key' }
-  let(:client) { klass.new(valid_api_key) }
+  let(:client) { subject.new(valid_api_key) }
   let(:cached_matches) { let_cassette('matches') { client.matches } }
   let(:cached_players) { cached_matches.included.select { |i| i.type == 'player' }}
 
   context 'metadata' do
     it 'returns an error with an invalid API key' do
       VCR.use_cassette('api_key', record: :new_episodes) do
-        response = klass.new('invalid-api-key').samples
+        response = subject.new('invalid-api-key').samples
         expects_error_response(response, 401)
       end
     end
@@ -30,7 +29,7 @@ describe VaingloryAPI::Client, vcr: true do
     it 'supports multiple regions' do
       VCR.use_cassette('samples', record: :new_episodes) do
         %w(eu sa ea sg).each do |region|
-          response = klass.new(valid_api_key, region).samples
+          response = subject.new(valid_api_key, region).samples
           expects_success_response(response)
         end
       end
