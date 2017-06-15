@@ -25,7 +25,14 @@ module VaingloryAPI
     # Valid short names (na, eu, etc...) extracted from DB metadata
     SHORT_NAMES = DB.map { |region_data| region_data[1] }.freeze
 
-    attr_reader :name, :short_name, :type
+    # @return [String] the name of the region
+    attr_reader :name
+
+    # @return [String] the short name of the region
+    attr_reader :short_name
+
+    # @return [String] the type of region
+    attr_reader :type
 
     # A new instance of Region.
     #
