@@ -78,11 +78,11 @@ module VaingloryAPI
     end
 
     # Gets data for a single match
+    #
     # @param [String] match_id the ID of the requested match
     # @example Get a single match
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     #   client.match('MATCH_ID')
-    #
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-single-match Vainglory API "Get a single Match"
     # @see https://developer.vainglorygame.com/docs#rosters Vainglory API "Rosters"

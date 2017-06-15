@@ -8,6 +8,18 @@ describe VaingloryAPI::Region do
     end
   end
 
+  describe '#eql?' do
+    let(:region) { VaingloryAPI::Region['na'] }
+
+    it 'returns TRUE when all attributes match' do
+      expect(region.eql?(VaingloryAPI::Region.find('na'))).to be true
+    end
+
+    it 'returns FALSE when any attribute does not match' do
+      expect(region.eql?(VaingloryAPI::Region.find('eu'))).to be false
+    end
+  end
+
   describe '.new' do
     it 'does not allow instantiation publicly' do
       expect { subject.new(nil, nil, nil) }.to raise_error NoMethodError
