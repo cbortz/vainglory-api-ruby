@@ -52,10 +52,10 @@ module VaingloryAPI
     # @example Compare two regions
     #   VaingloryAPI::Region['na'].eql? VaingloryAPI::Region['na'] # => true
     #   VaingloryAPI::Region['na'].eql? VaingloryAPI::Region['sg'] # => false
-    # @param [VaingloryAPU::Region] other_region another region to compare for quality
+    # @param [VaingloryAPU::Region] other another region to compare for quality
     # @return [Boolean] whether all attributes match
-    def eql? other_region
-      %i[name short_name type].all? { |a| self.send(a) == other_region.send(a) }
+    def eql?(other)
+      %i(name short_name type).all? { |a| send(a) == other.send(a) }
     end
 
     class << self
@@ -76,7 +76,7 @@ module VaingloryAPI
       def find(identifier)
         new(*find_region_data(identifier)) rescue name_error(identifier)
       end
-      alias_method :[], :find
+      alias [] find
 
       # Checks if short name is known
       #
@@ -104,7 +104,7 @@ module VaingloryAPI
       private
 
       def find_region_data(identifier)
-        DB.detect { |data| data[1,2].include?(identifier) }
+        DB.detect { |data| data[1, 2].include?(identifier) }
       end
 
       def name_error(identifier)
