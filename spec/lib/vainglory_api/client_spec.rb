@@ -6,7 +6,11 @@ describe VaingloryAPI::Client, vcr: true do
   let(:cached_matches) { let_cassette('matches') { client.matches } }
   let(:cached_players) { cached_matches.included.select { |i| i.type == 'player' }}
 
-  context 'metadata' do
+  it 'validates the region' do
+    expect { subject.new('API KEY', 'QQ') }.to raise_error VaingloryAPI::RegionNameError
+  end
+
+  describe 'metadata' do
     it 'returns an error with an invalid API key' do
       VCR.use_cassette('api_key', record: :new_episodes) do
         response = subject.new('invalid-api-key').samples
@@ -36,7 +40,7 @@ describe VaingloryAPI::Client, vcr: true do
     end
   end
 
-  context '#status' do
+  describe '#status' do
     it 'returns a status object' do
       VCR.use_cassette('status') do
         response = client.status
@@ -51,7 +55,7 @@ describe VaingloryAPI::Client, vcr: true do
     end
   end
 
-  context '#players' do
+  describe '#players' do
     it 'returns an array of players with a valid name' do
       VCR.use_cassette('players', record: :new_episodes) do
         valid_names = cached_players[0, 2].map { |p| p.attributes.name }
@@ -72,7 +76,7 @@ describe VaingloryAPI::Client, vcr: true do
     end
   end
 
-  context '#player' do
+  describe '#player' do
     it 'returns a player with a valid ID' do
       VCR.use_cassette('player', record: :new_episodes) do
         cached_player_id = cached_players.first.id
@@ -108,7 +112,7 @@ describe VaingloryAPI::Client, vcr: true do
     end
   end
 
-  context '#matches' do
+  describe '#matches' do
     it 'returns an array of matches' do
       VCR.use_cassette('matches', record: :new_episodes) do
         response = client.matches
@@ -151,7 +155,7 @@ describe VaingloryAPI::Client, vcr: true do
     end
   end
 
-  context '#match' do
+  describe '#match' do
     it 'returns a match with a valid ID' do
       VCR.use_cassette('match', record: :new_episodes) do
         cached_match_id = cached_matches.data.first.id
@@ -188,7 +192,7 @@ describe VaingloryAPI::Client, vcr: true do
     end
   end
 
-  context 'telemetry' do
+  describe '#telemetry' do
     it 'returns telemetry data for a valid URL' do
       VCR.use_cassette('telemetry', record: :new_episodes) do
         response = client.telemetry('https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/28/03/07/b0bb7faf-1363-11e7-b11e-0242ac110006-telemetry.json')
@@ -203,19 +207,19 @@ describe VaingloryAPI::Client, vcr: true do
     end
   end
 
-  context '#teams' do
+  describe '#teams' do
     it 'raises error' do
       expect { client.teams }.to raise_error(NotImplementedError)
     end
   end
 
-  context '#team' do
+  describe '#team' do
     it 'raises error' do
       expect { client.team('team_id') }.to raise_error(NotImplementedError)
     end
   end
 
-  context '#link' do
+  describe '#link' do
     it 'raises error' do
       expect { client.link('link_id') }.to raise_error(NotImplementedError)
     end
