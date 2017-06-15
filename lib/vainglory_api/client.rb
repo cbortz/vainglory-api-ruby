@@ -2,6 +2,7 @@ require 'json'
 require 'ostruct'
 require 'openssl'
 require 'net/http'
+require 'vainglory_api/region'
 
 module VaingloryAPI
   # Used to interface with the official Vainglory API
@@ -20,9 +21,13 @@ module VaingloryAPI
     # @example Initialize a new client
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     # @return [Client] a new instance of the client
+    # @note Requires a valid region short name.
+    # @see VaingloryAPI::Region::SHORT_NAMES
     def initialize(api_key, region = 'na')
       @api_key = api_key
       @region = region
+
+      validate_region
     end
 
     # Gets batches of random match data
@@ -167,6 +172,10 @@ module VaingloryAPI
     end
 
     private
+
+    def validate_region
+      VaingloryAPI::Region.validate_short_name! @region
+    end
 
     def get_request_without_headers(uri)
       get_request(uri, false)

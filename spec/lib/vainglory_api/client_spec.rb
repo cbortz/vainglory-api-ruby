@@ -6,7 +6,11 @@ describe VaingloryAPI::Client, vcr: true do
   let(:cached_matches) { let_cassette('matches') { client.matches } }
   let(:cached_players) { cached_matches.included.select { |i| i.type == 'player' }}
 
-  context 'metadata' do
+  it 'validates the region' do
+    expect { subject.new('API KEY', 'QQ') }.to raise_error VaingloryAPI::RegionNameError
+  end
+
+  describe 'metadata' do
     it 'returns an error with an invalid API key' do
       VCR.use_cassette('api_key', record: :new_episodes) do
         response = subject.new('invalid-api-key').samples
