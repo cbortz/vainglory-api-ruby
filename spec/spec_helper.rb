@@ -1,6 +1,7 @@
 require 'webmock/rspec'
 require 'vcr'
 require 'rspec'
+require 'support/klasses'
 require 'simplecov'
 require 'vainglory_api'
 
