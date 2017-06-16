@@ -1,12 +1,21 @@
-# vainglory-api
-[![Gem Version](https://badge.fury.io/rb/vainglory-api.svg)](https://badge.fury.io/rb/vainglory-api)
 [![Travis CI](https://travis-ci.org/cbortz/vainglory-api-ruby.svg?branch=master)](https://travis-ci.org/cbortz/vainglory-api-ruby)
 [![Code Climate](https://codeclimate.com/github/cbortz/vainglory-api-ruby/badges/gpa.svg)](https://codeclimate.com/github/cbortz/vainglory-api-ruby)
 [![Test Coverage](https://codeclimate.com/github/cbortz/vainglory-api-ruby/badges/coverage.svg)](https://codeclimate.com/github/cbortz/vainglory-api-ruby/coverage)
+[![Gem Version](https://img.shields.io/gem/v/vainglory-api.svg)](https://rubygems.org/gems/vainglory-api)
 [![Inline docs](http://inch-ci.org/github/cbortz/vainglory-api-ruby.svg?branch=master)](http://inch-ci.org/github/cbortz/vainglory-api-ruby)
+[![MIT License](https://img.shields.io/github/license/cbortz/vainglory-api-ruby.svg)](https://github.com/cbortz/vainglory-api-ruby/blob/master/LICENSE)
 
-- [YARD Documentation](http://www.rubydoc.info/github/cbortz/vainglory-api-ruby)
-- [Official Vainglory API Documentation](https://developer.vainglorygame.com/docs)
+# vainglory-api
+
+A Ruby libary wrapper for the Vainglory API
+
+- [Getting Started](https://github.com/cbortz/vainglory-api-ruby#getting-started)
+- [Installation](https://github.com/cbortz/vainglory-api-ruby#installation)
+- [Usage](https://github.com/cbortz/vainglory-api-ruby#usage)
+- [Contributing](https://github.com/cbortz/vainglory-api-ruby#contributing)
+- [License](https://github.com/cbortz/vainglory-api-ruby#license)
+
+See also: [YARD Documentation](http://www.rubydoc.info/github/cbortz/vainglory-api-ruby), [Official Vainglory API Documentation](https://developer.vainglorygame.com/docs)
 
 ---
 
@@ -14,7 +23,7 @@
 
 VaingloryAPI works with Ruby 2.0 onwards. Please refer to the [YARD Documentation](http://www.rubydoc.info/github/cbortz/vainglory-api-ruby) for a better understanding of how everything works.
 
-### Installation
+## Installation
 
 You can add it to your Gemfile with:
 
@@ -30,7 +39,7 @@ You can also install it manually with:
 gem install vainglory-api
 ```
 
-### Usage
+## Usage
 
 You can create an instance of the API client by initializing with your API key and [specified region](https://developer.vainglorygame.com/docs#regions) (`na` is the default):
 
@@ -38,7 +47,11 @@ You can create an instance of the API client by initializing with your API key a
 client = VaingloryAPI.new('YOUR_API_KEY', 'na')
 ```
 
-#### Helper Attributes
+### Region Errors
+
+A valid region short name is required when instantiating a client. Providing an invalid region short name will raise `VaingloryAPI::RegionNameError`.
+
+### Helper Attributes
 
 All client methods return an `OpenStruct` object containing the response attributes with some additional helper attributes.
 
@@ -50,7 +63,7 @@ response.success? # Returns true if the response code is less than 300
 response.raw      # The complete HTTP response
 ```
 
-#### Rate Limits
+### Rate Limits
 
 Each request will return data about your rate limits.
 
@@ -62,7 +75,7 @@ response.rate_reset     # The remaining window before the rate limit is refilled
 
 More information: https://developer.vainglorygame.com/docs#rate-limits
 
-#### Filtering
+### Filtering
 
 Currently, filters are supported by these client methods:
 
@@ -76,7 +89,7 @@ You can pass filters in as a hash using the exact Query Parameter key names outl
 client.matches('filter[playerNames]' => 'boombastic04,IHaveNoIdea')
 ```
 
-#### Methods
+### Methods
 
 To get __multiple matches__:
 
@@ -108,5 +121,10 @@ To get __Telemetry__ data, you must provide the data URL:
 client.telemetry('https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/03/28/03/07/b0bb7faf-1363-11e7-b11e-0242ac110006-telemetry.json')
 ```
 
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/cbortz/vainglory-api-ruby.
+
 ## License
+
 [MIT License](LICENSE). Copyright 2017 Chet Bortz
