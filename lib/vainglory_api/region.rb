@@ -36,15 +36,18 @@ module VaingloryAPI
 
     # A new instance of Region.
     #
-    # @param (String) type the type of region (general, tournament, etc...)
-    # @param (String) short_name the short name of the region
-    # @param (String) name the name of the region
+    # @param (String) identifier the name or short name of a region
     # @return [Region] a new instance of a Region
-    # @note Instantiation is private
-    def initialize(type, short_name, name)
-      @type = type
-      @short_name = short_name
-      @name = name
+    # @raise [VaingloryAPI::RegionNameError] if the identifier is not found
+    # @see SHORT_NAMES
+    # @see DB
+    def initialize(identifier)
+      data        = self.class.detect_region_info(identifier)
+      @type       = data[0]
+      @short_name = data[1]
+      @name       = data[2]
+    rescue NoMethodError
+      raise(RegionNameError, "Couldn't find region for '#{identifier}'")
     end
 
     # Alias method for short name
@@ -66,24 +69,8 @@ module VaingloryAPI
     end
 
     class << self
-      # Makes the contructor private
-      private :new
-
-      # Find a region by name or abbreviation ("short name")
-      #
-      # @example Finding a region
-      #   VaingloryAPI::Region.find('eu')
-      # @example Finding a region (alternative syntax)
-      #   VaingloryAPI::Region['eu'] # => <VaingloryAPI::Region ...>
-      # @param [String] identifier the target name or abbreviation of the region
-      # @return [Region] if the identifier is found
-      # @raise [VaingloryAPI::RegionNameError] if the identifier is not found
-      # @see DB
-      # @see SHORT_NAMES
-      def find(identifier)
-        new(*find_region_data(identifier)) rescue name_error(identifier)
-      end
-      alias [] find
+      alias find new
+      alias [] new
 
       # Checks if short name is known
       #
@@ -92,30 +79,22 @@ module VaingloryAPI
       #   VaingloryAPI::Region.valid_short_name?('QQ') # => false
       # @param [String] short_name the short name of a desired region
       # @return [Boolean] whether the short name is known
+      # @see SHORT_NAMES
+      # @see DB
       def valid_short_name?(short_name)
         SHORT_NAMES.include?(short_name)
       end
 
-      # Validates a short name
+      # Detects region data from DB constant
       #
-      # @example Validating a short name
-      #   VaingloryAPI::Region.validate_short_name!('na') # => true
-      #   VaingloryAPI::Region.validate_short_name!('QQ') # VaingloryAPI::RegionNameError
-      # @param [String] short_name the short name of a desired region
-      # @return [True] if the short name is valid
-      # @raise [VaingloryAPI::RegionNameError] if the short name is invalid
-      def validate_short_name!(short_name)
-        valid_short_name?(short_name) or name_error(short_name)
-      end
-
-      private
-
-      def find_region_data(identifier)
-        DB.detect { |data| data[1, 2].include?(identifier) }
-      end
-
-      def name_error(identifier)
-        raise(RegionNameError, "Couldn't find region for '#{identifier}'")
+      # @example Detecting region data from DB
+      #   VaingloryAPI::Region.detech_region_info('na')
+      # @param [String] identifier the name or short name of the desired region
+      # @return [Array] if region data is found
+      # @return [nil] if region data is not found
+      # @see DB
+      def detect_region_info(identifier)
+        DB.detect { |region_data| region_data[1, 2].include?(identifier) }
       end
     end
   end
