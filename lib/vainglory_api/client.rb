@@ -17,17 +17,15 @@ module VaingloryAPI
     # A new instance of Client.
     #
     # @param (String) api_key your Vainglory API key
-    # @param (String) region the short name for your specified Region shard
+    # @param (String) region_identifier the name or short name for your specified Region shard
     # @example Initialize a new client
     #   client = VaingloryAPI::Client.new('API_KEY', 'na')
     # @return [Client] a new instance of the client
     # @note Requires a valid region short name.
     # @see VaingloryAPI::Region::SHORT_NAMES
-    def initialize(api_key, region = 'na')
+    def initialize(api_key, region_identifier = 'na')
       @api_key = api_key
-      @region = region
-
-      validate_region
+      @region = Region.find(region_identifier)
     end
 
     # Gets batches of random match data
@@ -46,7 +44,7 @@ module VaingloryAPI
     # @see https://developer.vainglorygame.com/docs#pagination Vainglory API "Pagination"
     # @see https://developer.vainglorygame.com/docs#sorting Vainglory API "Sorting"
     def samples(filter_params = {})
-      get_request(endpoint_uri("shards/#{@region}/samples", filter_params))
+      get_request(shard_endpoint_uri('samples', filter_params))
     end
 
     # Gets data from matches (multiple)
@@ -74,7 +72,7 @@ module VaingloryAPI
     # @see https://developer.vainglorygame.com/docs#pagination Vainglory API "Pagination"
     # @see https://developer.vainglorygame.com/docs#sorting Vainglory API "Sorting"
     def matches(filter_params = {})
-      get_request(endpoint_uri("shards/#{@region}/matches", filter_params))
+      get_request(shard_endpoint_uri('matches', filter_params))
     end
 
     # Gets data for a single match
@@ -88,7 +86,7 @@ module VaingloryAPI
     # @see https://developer.vainglorygame.com/docs#rosters Vainglory API "Rosters"
     # @see https://developer.vainglorygame.com/docs#match-data-summary Vainglory API "Match Data Summary"
     def match(match_id)
-      get_request(endpoint_uri("shards/#{@region}/matches/#{match_id}"))
+      get_request(shard_endpoint_uri("matches/#{match_id}"))
     end
 
     # Gets data about players (one or more)
@@ -104,9 +102,10 @@ module VaingloryAPI
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-collection-of-players Vainglory API "Get a collection of players"
     def players(player_name, *additional_player_names)
-      player_names = [player_name].concat(additional_player_names)
+      player_names  = [player_name].concat(additional_player_names)
       filter_params = { 'filter[playerNames]' => player_names.join(',') }
-      get_request(endpoint_uri("shards/#{@region}/players", filter_params))
+
+      get_request(shard_endpoint_uri('players', filter_params))
     end
 
     # Gets data for a single player
@@ -118,7 +117,7 @@ module VaingloryAPI
     # @return [OpenStruct] the response and metadata
     # @see https://developer.vainglorygame.com/docs#get-a-single-player Vainglory API "Get a single Player"
     def player(player_id)
-      get_request(endpoint_uri("shards/#{@region}/players/#{player_id}"))
+      get_request(shard_endpoint_uri("players/#{player_id}"))
     end
 
     # Gets telemtry data from a specified URL
@@ -173,8 +172,8 @@ module VaingloryAPI
 
     private
 
-    def validate_region
-      VaingloryAPI::Region.validate_short_name! @region
+    def region_identifier
+      @region.short_name
     end
 
     def get_request_without_headers(uri)
@@ -202,6 +201,10 @@ module VaingloryAPI
       http.use_ssl      = true
 
       response(http.request(req))
+    end
+
+    def shard_endpoint_uri(path, filter_params = {})
+      endpoint_uri("shards/#{region_identifier}/#{path}", filter_params)
     end
 
     def endpoint_uri(path, filter_params = {})

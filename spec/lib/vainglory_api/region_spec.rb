@@ -3,7 +3,7 @@ require 'spec_helper'
 describe VaingloryAPI::Region do
   describe '#abbreviation' do
     it 'returns the short name' do
-      region = subject.find('ea')
+      region = subject.new('ea')
       expect(region.abbreviation).to eq region.short_name
     end
   end
@@ -12,37 +12,37 @@ describe VaingloryAPI::Region do
     let(:region) { VaingloryAPI::Region['na'] }
 
     it 'returns TRUE when all attributes match' do
-      expect(region.eql?(VaingloryAPI::Region.find('na'))).to be true
+      expect(region.eql?(VaingloryAPI::Region.new('na'))).to be true
     end
 
     it 'returns FALSE when any attribute does not match' do
-      expect(region.eql?(VaingloryAPI::Region.find('eu'))).to be false
+      expect(region.eql?(VaingloryAPI::Region.new('eu'))).to be false
     end
   end
 
   describe '.new' do
-    it 'does not allow instantiation publicly' do
-      expect { subject.new(nil, nil, nil) }.to raise_error NoMethodError
+    it 'instantiates a Region from the DB matching the identifier' do
+      expect(subject.new('North America')).to be_an_instance_of(subject)
+    end
+
+    it 'find a region by short name (abbreviation)' do
+      expect(subject.new('eu')).to be_an_instance_of(subject)
+    end
+
+    it 'raises an error when region identifier not found' do
+      expect { subject.new('QQ') }.to raise_error VaingloryAPI::RegionNameError
     end
   end
 
   describe '.find' do
-    it 'finds a region by name' do
-      expect(subject.find('North America')).to be_an_instance_of(subject)
-    end
-
-    it 'find a region by short name (abbreviation)' do
-      expect(subject.find('eu')).to be_an_instance_of(subject)
-    end
-
-    it 'raises an error when region not found' do
-      expect { subject.find('QQ') }.to raise_error VaingloryAPI::RegionNameError
+    it 'aliases .new' do
+      expect(subject.find('na')).to eql subject.new('na')
     end
   end
 
   describe '.[]' do
-    it 'aliases .find' do
-      expect(subject['na']).to eql subject.find('na')
+    it 'aliases .new' do
+      expect(subject['na']).to eql subject.new('na')
     end
   end
 
@@ -56,13 +56,15 @@ describe VaingloryAPI::Region do
     end
   end
 
-  describe '.validate_short_name!' do
-    it 'returns TRUE when the short name is found' do
-      expect(subject.validate_short_name!('tournament-sg')).to be true
+  describe '.detect_region_info' do
+    it 'returns an Array of region data when identifier is found' do
+      region_info = subject.detect_region_info('na')
+      expect(region_info).to be_an_instance_of(Array)
     end
 
-    it 'raises an error when the short name is not found' do
-      expect { subject.validate_short_name!('QQ') }.to raise_error VaingloryAPI::RegionNameError
+    it 'returns nil when identifier is not found' do
+      region_info = subject.detect_region_info('QQ')
+      expect(region_info).to be_nil
     end
   end
 end
