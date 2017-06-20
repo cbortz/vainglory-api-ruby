@@ -235,7 +235,7 @@ module VaingloryAPI
 
       {
         code:           response_code,
-        success?:       response_code < 300,
+        success?:       response_code < 400,
         rate_limit:     response_data['X-RateLimit-Limit'].to_i,
         rate_remaining: response_data['X-RateLimit-Remaining'].to_i,
         rate_reset:     response_data['X-RateLimit-Reset'].to_i,
