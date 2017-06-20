@@ -14,8 +14,7 @@ module VaingloryAPI
   #   client = VaingloryAPI.new('API_KEY', 'na')
   # @return [VaingloryAPI::Client] an instance of the client
   # @see VaingloryAPI::Client#initialize
-  def new(*args)
+  def self.new(*args)
     Client.new(*args)
   end
-  module_function :new
 end
